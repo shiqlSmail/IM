@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.im.file.server.repository.SysIMFileLogsRepository">
+	<resultMap id="BaseResultMap" type="com.im.file.server.domain.SysIMFileLogsEntity">
+		<id column="log_id" property="logId" jdbcType="VARCHAR" />
+		<result column="log_author" property="logAuthor" jdbcType="VARCHAR" />
+		<result column="log_createtime" property="logCreatetime" jdbcType="VARCHAR" />
+		<result column="log_status" property="logStatus" jdbcType="VARCHAR" />
+		<result column="log_request" property="logRequest" jdbcType="VARCHAR" />
+		<result column="log_times" property="logTimes" jdbcType="VARCHAR" />
+		<result column="log_ip" property="logIp" jdbcType="VARCHAR" />
+		<result column="log_type" property="logType" jdbcType="VARCHAR" />
+		<result column="log_system" property="logSystem" jdbcType="VARCHAR" />
+		<result column="log_selno" property="logSelno" jdbcType="VARCHAR" />
+		<result column="log_result" property="logResult" jdbcType="LONGVARCHAR" />
+		<result column="log_param" property="logParam" jdbcType="LONGVARCHAR" />
+	</resultMap>
+
+	<insert id="insertLogsByRequest" parameterType="com.im.file.server.domain.SysIMFileLogsEntity" >
+		insert into im_user_server_core_logs
+		<trim prefix="(" suffix=")" suffixOverrides="," >
+			<if test="logId != null" >
+				log_id,
+			</if>
+			<if test="logAuthor != null" >
+				log_author,
+			</if>
+			<if test="logCreatetime != null" >
+				log_createtime,
+			</if>
+			<if test="logStatus != null" >
+				log_status,
+			</if>
+			<if test="logRequest != null" >
+				log_request,
+			</if>
+			<if test="logTimes != null" >
+				log_times,
+			</if>
+			<if test="logIp != null" >
+				log_ip,
+			</if>
+			<if test="logType != null" >
+				log_type,
+			</if>
+			<if test="logSystem != null" >
+				log_system,
+			</if>
+			<if test="logSelno != null" >
+				log_selno,
+			</if>
+			<if test="logResult != null" >
+				log_result,
+			</if>
+			<if test="logParam != null" >
+				log_param,
+			</if>
+		</trim>
+		<trim prefix="values (" suffix=")" suffixOverrides="," >
+			<if test="logId != null" >
+				#{logId,jdbcType=VARCHAR},
+			</if>
+			<if test="logAuthor != null" >
+				#{logAuthor,jdbcType=VARCHAR},
+			</if>
+			<if test="logCreatetime != null" >
+				#{logCreatetime,jdbcType=VARCHAR},
+			</if>
+			<if test="logStatus != null" >
+				#{logStatus,jdbcType=VARCHAR},
+			</if>
+			<if test="logRequest != null" >
+				#{logRequest,jdbcType=VARCHAR},
+			</if>
+			<if test="logTimes != null" >
+				#{logTimes,jdbcType=VARCHAR},
+			</if>
+			<if test="logIp != null" >
+				#{logIp,jdbcType=VARCHAR},
+			</if>
+			<if test="logType != null" >
+				#{logType,jdbcType=VARCHAR},
+			</if>
+			<if test="logSystem != null" >
+				#{logSystem,jdbcType=VARCHAR},
+			</if>
+			<if test="logSelno != null" >
+				#{logSelno,jdbcType=VARCHAR},
+			</if>
+			<if test="logResult != null" >
+				#{logResult,jdbcType=LONGVARCHAR},
+			</if>
+			<if test="logParam != null" >
+				#{logParam,jdbcType=LONGVARCHAR},
+			</if>
+		</trim>
+	</insert>
+</mapper>

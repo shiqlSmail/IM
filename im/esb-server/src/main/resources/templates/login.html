@@ -1,0 +1,112 @@
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultrag.net.nz/thymeleaf/layout">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="Cache-Control" content="no-transform " />
+    <title>登录</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+
+	<link rel="stylesheet" th:href="@{/css/bootstrap.css}" media="all">
+	<link rel="stylesheet" th:href="@{/css/dropkick.css}" media="all">
+	<link rel="stylesheet" th:href="@{/css/easyui.css}" media="all">
+	<link rel="stylesheet" th:href="@{/css/default.css}" media="all">
+	<link rel="stylesheet" th:href="@{/css/themes.css}" media="all">
+</head>
+<body class="body-theme-1">
+<div class="div-login">
+
+	<div class="section-title">后台登录</div>
+	  <div class="form-group">
+		<label>用户名</label>
+		<input type="text" class="form-control" placeholder="请输入用户名" id="username">
+	  </div>
+	  <div class="form-group">
+		<label>密码</label>
+		<input type="password" class="form-control" placeholder="请输入密码" id="password">
+	  </div>
+	  <button type="button" class="btn btn-info btn-block" id="login_system">登录</button>
+	  <button type="button" class="btn btn-default btn-block"  onclick="ModelWindow.msgbox('请联系管理员重置密码','温馨提示',null,null)">忘记密码？</button>
+	  <div class="clear"></div>
+</div><!-- div-welcome -->
+
+<script th:src="@{/js/jquery.1.11.3.min.js}"></script>
+<script th:src="@{/js/bootstrap.min.js}"></script>
+<script th:src="@{/js/jquery.dropkick-min.js}"></script>
+<script th:src="@{/js/jquery.easyui.min.js}"></script>
+<script th:src="@{/js/pop.js}"></script>
+<script th:src="@{/js/myfunctions.js}"></script>
+<script th:src="@{/js/frame.js}"></script>
+<script th:src="@{/js/tips.js}" type="text/javascript"></script>
+
+<script>
+	// input 聚焦清空 离开还原 用户输入时 后边出现清空按钮,点击可以清空
+	function check() {
+		if ($("#username").val() == "") {
+			$("#username").tips({
+				side: 2,
+				msg: "请输入用户名！",
+				bg: '#FF5080',
+				time: 3
+			});
+			$("#username").focus();
+			return false;
+		}
+		if ($("#password").val() == "") {
+			$("#password").tips({
+				side: 2,
+				msg: "请输入密码！",
+				bg: '#FF5080',
+				time: 3
+			});
+			$("#password").focus();
+			return false;
+		}
+		return true;
+	}
+
+
+	$("#login_system").click(function(){
+		if (check()) {
+			//请求参数
+			var params = {
+				"username": $("#username").val(),
+				"password": $("#password").val()
+			};
+
+			$.ajax({
+				//请求方式
+				type: "POST",
+				//请求的媒体类型
+				contentType: "application/json;charset=UTF-8",
+				//请求地址
+				url: "../user/login",
+				dataType:"json",
+				//数据，json字符串
+				data: JSON.stringify(params),
+				//请求成功
+				success: function (result) {
+					console.log(result);
+					if (result.code == "000000") {
+						window.location.href = "../index.htm";
+					}else{
+						ModelWindow.tips(result.data);
+					}
+				},
+				//请求失败，包含具体的错误信息
+				error: function (e) {
+					console.log(e.status);
+					console.log(e.responseText);
+					window.location.href = "../login.htm";
+				}
+			});
+		}
+	})
+
+	$(document).keyup(function (event) {
+		if (event.keyCode == 13) {
+			$("#login_system").trigger("click");
+		}
+	});
+</script>
+</body>
+</html>

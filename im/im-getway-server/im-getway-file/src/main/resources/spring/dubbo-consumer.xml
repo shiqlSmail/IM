@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	   xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+	   xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://code.alibabatech.com/schema/dubbo
+       http://code.alibabatech.com/schema/dubbo/dubbo.xsd"
+	   default-lazy-init="false">
+
+	<!--  文件服务日志注册中心 -->
+	<dubbo:reference interface="com.im.file.server.facade.SysIMFileLogsFacade" id="sysIMFileLogsFacade"/>
+
+	<!-- 文件服务注册中心 -->
+	<dubbo:reference interface="com.im.file.server.facade.TableFileFacade" id="tableFileFacade"/>
+</beans>

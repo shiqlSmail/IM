@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="im-file-server-service" />
+        <module name="im-file-server-facade" />
+        <module name="im-user-server-service" />
+        <module name="im-user-server-facade" />
+        <module name="im-getway-user" />
+        <module name="im-user-server-core-dubbo" />
+        <module name="im-user-server-model" />
+        <module name="im-file-server-dal" />
+        <module name="im-user-server-dal" />
+        <module name="esb-server" />
+        <module name="im-getway-file" />
+        <module name="im-file-server-model" />
+        <module name="im-server-tools" />
+        <module name="im-file-server-core-dubbo" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="document" target="1.5" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="esb-server" options="-parameters" />
+      <module name="im-file-server-core-dubbo" options="-parameters" />
+      <module name="im-file-server-dal" options="-parameters" />
+      <module name="im-file-server-facade" options="-parameters" />
+      <module name="im-file-server-model" options="-parameters" />
+      <module name="im-file-server-service" options="-parameters" />
+      <module name="im-getway-file" options="-parameters" />
+      <module name="im-getway-user" options="-parameters" />
+      <module name="im-server-tools" options="-parameters" />
+      <module name="im-user-server-core-dubbo" options="-parameters" />
+      <module name="im-user-server-dal" options="-parameters" />
+      <module name="im-user-server-facade" options="-parameters" />
+      <module name="im-user-server-model" options="-parameters" />
+      <module name="im-user-server-service" options="-parameters" />
+    </option>
+  </component>
+</project>

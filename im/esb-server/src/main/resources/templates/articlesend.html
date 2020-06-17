@@ -1,0 +1,133 @@
+<html xmlns:th="http://www.thymeleaf.org" xmlns:layout="http://www.ultrag.net.nz/thymeleaf/layout">
+<head>
+    <meta charset="utf-8">
+    <title>
+        接口发送
+    </title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="stylesheet" href="/css/font.css">
+    <link rel="stylesheet" href="/css/index.css">
+    <script src="/lib/layui/layui.js" charset="utf-8"></script>
+    <script type="text/javascript" src="/js/index.js"></script>
+
+    <!--<style>
+        .imgs{display: none;}
+        .picture{display: none;}
+    </style>-->
+
+    <!--百度编辑器-->
+    <script src="/ueditor/ueditor.config.js"></script>
+    <script src="/ueditor/ueditor.all.min.js"></script>
+    <script src="/ueditor/lang/zh-cn/zh-cn.js"></script>
+    <script th:src="@{/js/jquery.1.11.3.min.js}"></script>
+    <script th:src="@{/js/myfunctions.js}"></script>
+</head>
+<body>
+
+<div class="layui-card">
+    <form class="layui-form layui-form-pane" action="" id="add">
+        <div class="layui-tab layui-tab-brief" lay-filter="docDemoTabBrief">
+            <div class="layui-tab-content" >
+                <div class="layui-tab-item layui-show">
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">
+                            <span class='x-red'>*</span>接口名称
+                        </label>
+                        <div class="layui-input-block">
+                            <span th:text="${apiData.apiName}">
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">
+                            <span class='x-red'>*</span>接口描述
+                        </label>
+                        <div class="layui-input-block">
+                            <span th:text="${apiData.apiContext}">
+                        </div>
+                    </div>
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">
+                            <span class='x-red'>*</span>接口路径
+                        </label>
+                        <div class="layui-input-block">
+                            http://localhost:12121/xml <br/>
+                            http://localhost:12121/json
+                        </div>
+                    </div>
+
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">
+                            <span class='x-red'>*</span>请求参数
+                        </label>
+                        <div class="layui-input-block">
+                            <span th:text="${apiData.apiParam}">
+                        </div>
+                    </div>
+
+                    <div class="layui-form-item">
+                        <label class="layui-form-label">
+                            <span class='x-red'>*</span>返回数据
+                        </label>
+                        <div class="layui-input-block">
+                            <textarea id="textarea_send" style="width: 600px;height:200px;"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="layui-form-item">
+                        <button class="layui-btn" type="button" lay-filter="add" lay-submit=""id="to_send">
+                            发送
+                        </button>
+                    </div>
+                    <input type="hidden" id="send_id" th:value="${apiData.apiId}"/>
+                    <!--</form>-->
+                    <div style="height:100px;"></div>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
+<script type="text/javascript">
+    //实例化编辑器
+    //建议使用工厂方法getEditor创建和引用编辑器实例，如果在某个闭包下引用该编辑器，直接调用UE.getEditor('editor')就能拿到相关的实例
+    UE.getEditor('content',{initialFrameWidth:600,initialFrameHeight:400,});
+</script>
+<script>
+    $("#to_send").click(function(){
+        //请求参数
+        var params = {
+            "id": $("#send_id").val()
+        };
+
+        $.ajax({
+            //请求方式
+            type: "POST",
+            //请求的媒体类型
+            contentType: "application/json;charset=UTF-8",
+            //请求地址
+            url: "../user/simulation",
+            dataType:"json",
+            //数据，json字符串
+            data: JSON.stringify(params),
+            //请求成功
+            success: function (result) {
+                console.log(result);
+                $("#textarea_send").val(JSON.stringify(result.data));
+            },
+            //请求失败，包含具体的错误信息
+            error: function (e) {
+                console.log(e.status);
+                console.log(e.responseText);
+                $("#textarea_send").val("发送失败");
+            }
+        });
+    })
+</script>
+</body>
+</html>

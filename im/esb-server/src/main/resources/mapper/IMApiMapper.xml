@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.esb.im.server.dao.IMApiMapper" >
+  <resultMap id="BaseResultMap" type="com.esb.im.server.domain.IMApiDO" >
+    <id column="api_id" property="apiId" jdbcType="INTEGER" />
+    <result column="api_context" property="apiContext" jdbcType="VARCHAR" />
+    <result column="api_url" property="apiUrl" jdbcType="VARCHAR" />
+    <result column="api_param" property="apiParam" jdbcType="VARCHAR" />
+    <result column="api_transcode" property="apiTranscode" jdbcType="VARCHAR" />
+    <result column="api_status" property="apiStatus" jdbcType="INTEGER" />
+    <result column="api_name" property="apiName" jdbcType="VARCHAR" />
+    <result column="api_menu" property="apiMenu" jdbcType="INTEGER" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    api_id, api_name, api_context, api_url, api_param,api_transcode,api_status,api_menu
+  </sql>
+
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from api
+    where api_id = #{apiId,jdbcType=INTEGER}
+  </select>
+
+  <select id="selectByTransCode" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select
+    <include refid="Base_Column_List" />
+    from api
+    where api_transcode = #{apiTranscode,jdbcType=VARCHAR}
+  </select>
+
+  <select id="selectAll" resultMap="BaseResultMap" parameterType="java.lang.Integer">
+    select
+    <include refid="Base_Column_List" />
+    from api
+    where api_menu = #{apiMenu,jdbcType=INTEGER}
+  </select>
+
+  <delete id="delete" parameterType="java.lang.Integer">
+    delete from api where api_id = #{apiId,jdbcType=INTEGER}
+  </delete>
+
+  <insert id="save" parameterType="com.esb.im.server.domain.IMApiDO">
+     insert api(api_context,api_url,api_param,api_transcode,api_status,api_name,api_menu)
+    value(#{apiContext,jdbcType=VARCHAR},#{apiUrl,jdbcType=VARCHAR},#{apiParam,jdbcType=VARCHAR},#{apiTranscode,jdbcType=VARCHAR},#{apiStatus,jdbcType=INTEGER},#{apiName,jdbcType=VARCHAR},#{apiMenu,jdbcType=INTEGER})
+  </insert>
+
+  <update id="edit" parameterType="com.esb.im.server.domain.IMApiDO" >
+    update api
+    set
+    <if test="apiContext != null and apiContext != ''">
+      api_context = #{apiContext,jdbcType=VARCHAR},
+    </if>
+    <if test="apiUrl != null and apiUrl != ''">
+      api_url = #{apiUrl,jdbcType=VARCHAR},
+    </if>
+    <if test="apiParam != null and apiParam != ''">
+      api_param = #{apiParam,jdbcType=VARCHAR},
+    </if>
+    <if test="apiTranscode != null and apiTranscode != ''">
+      api_transcode = #{apiTranscode,jdbcType=VARCHAR}
+    </if>
+    <if test="apiStatus != null and apiStatus != ''">
+      api_status = #{apiStatus,jdbcType=INTEGER}
+    </if>
+    <if test="apiName != null and apiName != ''">
+      api_name = #{apiName,jdbcType=VARCHAR}
+    </if>
+    where api_id = #{apiId,jdbcType=INTEGER}
+  </update>
+</mapper>

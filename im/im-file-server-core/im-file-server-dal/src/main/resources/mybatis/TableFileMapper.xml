@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.im.file.server.repository.TableFileRepository">
+    <resultMap id="fileTableResultMap" type="com.im.file.server.domain.TableFileEntity">
+        <id column="file_id" jdbcType="INTEGER" property="file_id"/>
+        <result column="file_name" jdbcType="VARCHAR" property="file_name"/>
+        <result column="file_path" jdbcType="VARCHAR" property="file_path"/>
+        <result column="file_type" jdbcType="VARCHAR" property="file_type"/>
+        <result column="file_size" jdbcType="VARCHAR" property="file_size"/>
+        <result column="file_fixname" jdbcType="VARCHAR" property="file_fixname"/>
+        <result column="file_new_name" jdbcType="VARCHAR" property="file_new_name"/>
+        <result column="platform" jdbcType="VARCHAR" property="platform"/>
+        <result column="auther" jdbcType="VARCHAR" property="auther"/>
+        <result column="createtime" jdbcType="VARCHAR" property="createtime"/>
+        <result column="Identification" jdbcType="VARCHAR" property="Identification"/>
+    </resultMap>
+
+
+    <select id="selectFileAll" resultMap="fileTableResultMap">
+		select * from table_file
+	</select>
+
+    <select id="selectFileCount" resultType="java.lang.Integer">
+		select count(-1) from table_file
+	</select>
+
+    <select id="selectFileByIdentification" resultMap="fileTableResultMap" parameterType="com.im.file.server.domain.TableFileEntity">
+		select * from table_file where Identification = #{Identification,jdbcType=VARCHAR}
+	</select>
+
+    <!--  useGeneratedKeys="true" keyProperty="Identification" keyColumn="Identification" -->
+    <insert id="saveFile" parameterType="com.im.file.server.domain.TableFileEntity">
+        insert into table_file
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="file_name != null">
+                file_name,
+            </if>
+            <if test="file_path != null">
+                file_path,
+            </if>
+            <if test="file_type != null">
+                file_type,
+            </if>
+            <if test="file_size != null">
+                file_size,
+            </if>
+            <if test="file_fixname != null">
+                file_fixname,
+            </if>
+            <if test="file_new_name != null">
+                file_new_name,
+            </if>
+            <if test="platform != null">
+                platform,
+            </if>
+            <if test="auther != null">
+                auther,
+            </if>
+            <if test="createtime != null">
+                createtime,
+            </if>
+            <if test="Identification != null">
+                Identification,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="file_name != null">
+                #{file_name,jdbcType=VARCHAR},
+            </if>
+            <if test="file_path != null">
+                #{file_path,jdbcType=VARCHAR},
+            </if>
+            <if test="file_type != null">
+                #{file_type,jdbcType=VARCHAR},
+            </if>
+            <if test="file_size != null">
+                #{file_size,jdbcType=VARCHAR},
+            </if>
+            <if test="file_fixname != null">
+                #{file_fixname,jdbcType=VARCHAR},
+            </if>
+            <if test="file_new_name != null">
+                #{file_new_name,jdbcType=VARCHAR},
+            </if>
+            <if test="platform != null">
+                #{platform,jdbcType=VARCHAR},
+            </if>
+            <if test="auther != null">
+                #{auther,jdbcType=VARCHAR},
+            </if>
+            <if test="createtime != null">
+                #{createtime,jdbcType=VARCHAR},
+            </if>
+            <if test="Identification != null">
+                #{Identification,jdbcType=VARCHAR},
+            </if>
+        </trim>
+    </insert>
+</mapper>

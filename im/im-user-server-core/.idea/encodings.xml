@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/../esb-server" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../im-file-server-core" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../im-file-server-core/im-file-server-core-dubbo" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../im-file-server-core/im-file-server-dal" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../im-file-server-core/im-file-server-facade" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../im-file-server-core/im-file-server-model" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../im-file-server-core/im-file-server-service" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../im-getway-server" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../im-getway-server/im-getway-file" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../im-getway-server/im-getway-user" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/../im-server-tools" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/im-user-server-core-dubbo" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/im-user-server-dal" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/im-user-server-facade" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/im-user-server-model" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/im-user-server-service" charset="UTF-8" />
+  </component>
+</project>

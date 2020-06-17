@@ -1,0 +1,1062 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="4183f08f-517e-423d-adec-29af5d0f9127" name="Default Changelist" comment="" />
+    <ignored path="$PROJECT_DIR$/out/" />
+    <ignored path="$PROJECT_DIR$/target/" />
+    <ignored path="$PROJECT_DIR$/im-user-server-model/target/" />
+    <ignored path="$PROJECT_DIR$/im-user-server-dal/target/" />
+    <ignored path="$PROJECT_DIR$/im-user-server-service/target/" />
+    <ignored path="$PROJECT_DIR$/im-user-server-facade/target/" />
+    <ignored path="$PROJECT_DIR$/im-user-server-core-dubbo/target/" />
+    <ignored path="$PROJECT_DIR$/../im-server-tools/target/" />
+    <ignored path="$PROJECT_DIR$/../im-file-server-core/im-file-server-service/target/" />
+    <ignored path="$PROJECT_DIR$/../im-file-server-core/im-file-server-core-dubbo/target/" />
+    <ignored path="$PROJECT_DIR$/../im-file-server-core/im-file-server-facade/target/" />
+    <ignored path="$PROJECT_DIR$/../im-file-server-core/target/" />
+    <ignored path="$PROJECT_DIR$/../im-file-server-core/im-file-server-model/target/" />
+    <ignored path="$PROJECT_DIR$/../im-file-server-core/im-file-server-dal/target/" />
+    <ignored path="$PROJECT_DIR$/../im-getway-server/target/" />
+    <ignored path="$PROJECT_DIR$/../document/target/" />
+    <ignored path="$PROJECT_DIR$/../im-getway-server/im-getway-user/target/" />
+    <ignored path="$PROJECT_DIR$/../im-getway-server/im-getway-file/target/" />
+    <ignored path="$PROJECT_DIR$/../esb-server/target/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageViewManager">
+    <option name="myElementSize" value="195" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="DefaultGradleProjectSettings">
+    <option name="isMigrated" value="true" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/../document/document/im-file-server-core.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="76">
+                <caret line="4" column="18" lean-forward="true" selection-start-line="4" selection-start-column="18" selection-end-line="4" selection-end-column="18" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../document/document/im-user-server-core.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="76">
+                <caret line="4" column="18" lean-forward="true" selection-end-line="4" selection-end-column="18" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="AnnotationType" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>log</find>
+      <find>druid-spring-boot-starter</find>
+      <find>DRUID_SOURCE_PREFIX</find>
+      <find>com.alibaba</find>
+      <find>spring.datasource.druid.master</find>
+      <find>com.im.file.server.repository</find>
+      <find>com.ilonw.server.bo.file.TableFileBO</find>
+      <find>User</find>
+      <find>Use</find>
+      <find>com.ilonw.file.controller</find>
+      <find>TableFileBO</find>
+      <find>log_system</find>
+      <find>logSystem</find>
+      <find>ilonw</find>
+      <find>mybatis-spring-boot-starter</find>
+      <find>selectFilePath</find>
+      <find>TableFileVO</find>
+      <find>img</find>
+      <find>glyphicon-ok</find>
+      <find>element</find>
+      <find>.pop-dropdown-apps</find>
+      <find>main-frame</find>
+      <find>div-rightside</find>
+      <find>div-leftside</find>
+      <find>member_del</find>
+      <find>delAll</find>
+      <find>verify</find>
+      <find>文章类型列表</find>
+      <find>layui-tab-title</find>
+      <find>tip</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>&gt;</replace>
+      <replace>&amp;&amp;</replace>
+      <replace>List</replace>
+      <replace>IM-getway</replace>
+      <replace>com.im.user.server.domain.IMUserEntity</replace>
+      <replace>imUserRepository</replace>
+      <replace>IMUserEntity</replace>
+      <replace>IM</replace>
+      <replace>&quot;&quot;</replace>
+      <replace>imUserService</replace>
+      <replace>JsonResult</replace>
+      <replace>com.esb.im.server.controller</replace>
+      <replace>com.esb.im.server.dao</replace>
+      <replace>com.im.file.server.domain.TableFileEntity</replace>
+      <replace>File</replace>
+      <replace>com.im.getway.server.controller</replace>
+      <replace>TableFileEntity</replace>
+      <replace>im</replace>
+      <replace>TableFileRequest</replace>
+    </replaceStrings>
+    <dirStrings>
+      <dir>H:\im\im-file-server-core\im-file-server-core-dubbo\src\main\java\com\im\file\server\datasource</dir>
+    </dirStrings>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/../esb-server/src/main/java/com/esb/im/server/system/HttpRequester.java" />
+        <option value="$PROJECT_DIR$/../esb-server/src/main/java/com/esb/im/server/system/InterfaceBean.java" />
+        <option value="$PROJECT_DIR$/../esb-server/src/main/java/com/esb/im/server/controller/FileController.java" />
+        <option value="$PROJECT_DIR$/../esb-server/src/main/java/com/esb/im/server/config/SpringConfigClass.java" />
+        <option value="$PROJECT_DIR$/../esb-server/src/main/java/com/esb/im/server/listener/StartListener.java" />
+        <option value="$PROJECT_DIR$/../esb-server/src/main/java/com/esb/im/server/filter/EncodingFilter.java" />
+        <option value="$PROJECT_DIR$/../esb-server/src/main/java/com/esb/im/server/ESBServerApplication.java" />
+        <option value="$PROJECT_DIR$/../esb-server/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/../esb-server/src/main/java/com/esb/im/server/config/ConfigAdapter.java" />
+        <option value="$PROJECT_DIR$/../esb-server/src/main/java/com/esb/im/server/controller/ErrorController.java" />
+        <option value="$PROJECT_DIR$/../esb-server/src/main/resources/static/css/404.css" />
+        <option value="$PROJECT_DIR$/../esb-server/src/main/resources/templates/error/404.html" />
+        <option value="$PROJECT_DIR$/../esb-server/src/main/resources/static/js/myfunctions.js" />
+        <option value="$PROJECT_DIR$/../esb-server/src/main/java/com/esb/im/server/domain/IMLoginDO.java" />
+        <option value="$PROJECT_DIR$/../esb-server/src/main/resources/templates/login.html" />
+        <option value="$PROJECT_DIR$/../esb-server/src/main/java/com/esb/im/server/request/IMLoginParam.java" />
+        <option value="$PROJECT_DIR$/../esb-server/src/main/resources/static/css/default.css" />
+        <option value="$PROJECT_DIR$/../esb-server/src/main/java/com/esb/im/server/common/utils/Query.java" />
+        <option value="$PROJECT_DIR$/../esb-server/pom.xml" />
+        <option value="$PROJECT_DIR$/../esb-server/src/main/resources/application-dev.yml" />
+        <option value="$PROJECT_DIR$/../esb-server/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/../esb-server/src/main/java/com/esb/im/server/system/controller/RoleController.java" />
+        <option value="$PROJECT_DIR$/../esb-server/src/main/java/com/esb/im/server/controller/ViewController.java" />
+        <option value="$PROJECT_DIR$/../esb-server/src/main/java/com/esb/im/server/config/WebMvcConfig.java" />
+        <option value="$PROJECT_DIR$/../esb-server/src/main/java/com/esb/im/server/dao/IMLoginMapper.java" />
+        <option value="$PROJECT_DIR$/../esb-server/src/main/java/com/esb/im/server/service/IMLoginService.java" />
+        <option value="$PROJECT_DIR$/../esb-server/src/main/java/com/esb/im/server/serviceimpl/IMLoginServiceImpl.java" />
+        <option value="$PROJECT_DIR$/../esb-server/src/main/resources/mapper/IMLoginMapper.xml" />
+        <option value="$PROJECT_DIR$/../esb-server/src/main/java/com/esb/im/server/request/IMApiIdParam.java" />
+        <option value="$PROJECT_DIR$/../esb-server/src/main/resources/static/js/index.js" />
+        <option value="$PROJECT_DIR$/../esb-server/src/main/resources/templates/admin-edit.html" />
+        <option value="$PROJECT_DIR$/../esb-server/src/main/resources/templates/one_set.html" />
+        <option value="$PROJECT_DIR$/../esb-server/src/main/resources/templates/admin-add.html" />
+        <option value="$PROJECT_DIR$/../esb-server/src/main/java/com/esb/im/server/controller/ESBController.java" />
+        <option value="$PROJECT_DIR$/../esb-server/src/main/resources/templates/article-list.html" />
+        <option value="$PROJECT_DIR$/../esb-server/src/main/resources/templates/admin-list.html" />
+        <option value="$PROJECT_DIR$/../esb-server/src/main/resources/templates/articlesend.html" />
+        <option value="$PROJECT_DIR$/../esb-server/src/main/java/com/esb/im/server/domain/IMApiDO.java" />
+        <option value="$PROJECT_DIR$/../esb-server/src/main/resources/mapper/IMApiMapper.xml" />
+        <option value="$PROJECT_DIR$/../esb-server/src/main/java/com/esb/im/server/dao/IMApiMapper.java" />
+        <option value="$PROJECT_DIR$/../esb-server/src/main/java/com/esb/im/server/service/IMApiService.java" />
+        <option value="$PROJECT_DIR$/../esb-server/src/main/java/com/esb/im/server/serviceimpl/IMApiServiceImpl.java" />
+        <option value="$PROJECT_DIR$/../esb-server/src/main/java/com/esb/im/server/controller/PageViewController.java" />
+        <option value="$PROJECT_DIR$/../esb-server/src/main/resources/templates/index.html" />
+        <option value="$PROJECT_DIR$/../esb-server/src/main/resources/templates/articleadd.html" />
+        <option value="$PROJECT_DIR$/../esb-server/src/main/java/com/esb/im/server/request/IMApiParam.java" />
+        <option value="$PROJECT_DIR$/../esb-server/src/main/java/com/esb/im/server/controller/UserController.java" />
+        <option value="$PROJECT_DIR$/../document/document/ESB.md" />
+        <option value="$PROJECT_DIR$/../document/document/im-server-tools.md" />
+        <option value="$PROJECT_DIR$/../document/document/im-user-server-core.md" />
+        <option value="$PROJECT_DIR$/../document/document/im-file-server-core.md" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="userSettingsFile" value="F:\apache-maven-3.3.3\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="esb-server" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="esb-server" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
+        </path>
+      </expand>
+      <select />
+    </treeState>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1382" />
+    <option name="height" value="754" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="PackagesPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="im-user-server-core" type="b2602c69:ProjectViewProjectNode" />
+              <item name="document" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="im-user-server-core" type="b2602c69:ProjectViewProjectNode" />
+              <item name="document" type="462c0819:PsiDirectoryNode" />
+              <item name="document" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="im-user-server-core" type="b2602c69:ProjectViewProjectNode" />
+              <item name="im-user-server-core" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../document/document" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="settings.editor.selected.configurable" value="spring" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="H:\im\esb-server\src\main\resources\static" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.im.file.server" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.esb.im.server.request" />
+      <recent name="com.esb.im.server.config" />
+      <recent name="com.esb.im.server.controller" />
+      <recent name="com.esb.im.server.serviceimpl" />
+      <recent name="com.esb.im.server.service" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="H:\im\document\document" />
+      <recent name="H:\im\document\sql" />
+      <recent name="H:\im\esb-server\src\main\resources\templates" />
+      <recent name="H:\im\esb-server\src\main\resources\static\js" />
+      <recent name="H:\im\esb-server\src\main\resources\static\css" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Spring Boot.ESBServerApplication">
+    <configuration name="DemoTest.test1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="im-user-server-core-dubbo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.im.user.server.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.im.user.server.test" />
+      <option name="MAIN_CLASS_NAME" value="com.im.user.server.test.DemoTest" />
+      <option name="METHOD_NAME" value="test1" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DemoTest.test1" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="im-file-server-core-dubbo" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.im.file.server.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.im.file.server" />
+      <option name="MAIN_CLASS_NAME" value="com.im.file.server.DemoTest" />
+      <option name="METHOD_NAME" value="test1" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ESBServerApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="esb-server" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.esb.im.server.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.esb.im.server.ESBServerApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="IMFileApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="im-getway-file" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.im.getway.server.IMFileApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="IMFileServerCoreApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="im-file-server-core-dubbo" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.im.file.server.IMFileServerCoreApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="IMUserApiApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <module name="im-getway-user" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.im.getway.server.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.im.getway.server.IMUserApiApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="IMUserServerCoreDubboApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="im-user-server-core-dubbo" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.im.user.server.IMUserServerCoreDubboApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Spring Boot.ESBServerApplication" />
+        <item itemvalue="Spring Boot.IMUserApiApplication" />
+        <item itemvalue="JUnit.DemoTest.test1" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="4183f08f-517e-423d-adec-29af5d0f9127" name="Default Changelist" comment="" />
+      <created>1591971739830</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1591971739830</updated>
+      <workItem from="1591971743170" duration="42188000" />
+      <workItem from="1592064685067" duration="3611000" />
+      <workItem from="1592069486410" duration="13196000" />
+      <workItem from="1592121005989" duration="5347000" />
+      <workItem from="1592126401014" duration="2139000" />
+      <workItem from="1592128577794" duration="5425000" />
+      <workItem from="1592144061349" duration="47882000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TestHistory">
+    <history-entry file="DemoTest_test1 - 2020.06.14 at 20h 13m 33s.xml">
+      <configuration name="DemoTest.test1" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="DemoTest_test1 - 2020.06.14 at 20h 18m 18s.xml">
+      <configuration name="DemoTest.test1" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="DemoTest_test1 - 2020.06.14 at 20h 21m 04s.xml">
+      <configuration name="DemoTest.test1" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="DemoTest_test1 - 2020.06.14 at 20h 24m 04s.xml">
+      <configuration name="DemoTest.test1" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="DemoTest_test1 - 2020.06.14 at 20h 26m 38s.xml">
+      <configuration name="DemoTest.test1" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="DemoTest_test1 - 2020.06.14 at 20h 29m 13s.xml">
+      <configuration name="DemoTest.test1" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="DemoTest_test1 - 2020.06.14 at 20h 34m 05s.xml">
+      <configuration name="DemoTest.test1" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="DemoTest_test1 - 2020.06.14 at 20h 43m 29s.xml">
+      <configuration name="DemoTest.test1" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="DemoTest_test1 - 2020.06.14 at 20h 44m 41s.xml">
+      <configuration name="DemoTest.test1" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="DemoTest_test1 - 2020.06.14 at 22h 15m 41s.xml">
+      <configuration name="DemoTest.test1" configurationId="JUnit" />
+    </history-entry>
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="119788000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1456" height="886" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Image Layers" order="0" />
+      <window_info id="Capture Tool" order="1" />
+      <window_info id="UI Designer" order="2" />
+      <window_info id="Favorites" order="3" side_tool="true" />
+      <window_info id="Learn" order="4" weight="0.3295129" />
+      <window_info id="Web" order="5" side_tool="true" />
+      <window_info id="Designer" order="6" />
+      <window_info active="true" content_ui="combo" id="Project" order="7" visible="true" weight="0.22922637" />
+      <window_info id="Structure" order="8" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Terminal" order="0" />
+      <window_info anchor="bottom" id="Docker" order="1" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="2" sideWeight="0.50143266" side_tool="true" weight="0.96015936" />
+      <window_info anchor="bottom" id="Messages" order="3" weight="0.32934928" />
+      <window_info anchor="bottom" id="Java Enterprise" order="4" />
+      <window_info anchor="bottom" id="Database Changes" order="5" />
+      <window_info anchor="bottom" id="Version Control" order="6" />
+      <window_info anchor="bottom" id="Spring" order="7" />
+      <window_info anchor="bottom" id="Message" order="8" />
+      <window_info anchor="bottom" id="Find" order="9" weight="0.32934928" />
+      <window_info anchor="bottom" id="Run" order="10" sideWeight="0.49856734" weight="0.45683932" />
+      <window_info anchor="bottom" id="Debug" order="11" sideWeight="0.49856734" weight="0.4555113" />
+      <window_info anchor="bottom" id="Cvs" order="12" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="13" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="14" />
+      <window_info anchor="right" id="Coverage" order="0" sideWeight="0.50487804" side_tool="true" weight="0.3295129" />
+      <window_info anchor="right" id="Palette" order="1" />
+      <window_info anchor="right" id="Capture Analysis" order="2" />
+      <window_info anchor="right" id="Maven" order="3" sideWeight="0.49512196" weight="0.3295129" />
+      <window_info anchor="right" id="Database" order="4" sideWeight="0.49756098" weight="0.3295129" />
+      <window_info anchor="right" id="Palette&#9;" order="5" />
+      <window_info anchor="right" id="Theme Preview" order="6" />
+      <window_info anchor="right" id="Bean Validation" order="7" weight="0.3295129" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="8" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="9" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="10" weight="0.25" />
+    </layout>
+    <layout-to-restore>
+      <window_info id="Image Layers" order="0" />
+      <window_info id="Capture Tool" order="1" />
+      <window_info id="UI Designer" order="2" />
+      <window_info id="Favorites" order="3" side_tool="true" />
+      <window_info id="Learn" order="4" weight="0.3295129" />
+      <window_info id="Web" order="5" side_tool="true" />
+      <window_info id="Designer" order="6" />
+      <window_info active="true" content_ui="combo" id="Project" order="7" visible="true" weight="0.22922637" />
+      <window_info id="Structure" order="8" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Terminal" order="0" />
+      <window_info anchor="bottom" id="Docker" order="1" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="2" sideWeight="0.50143266" side_tool="true" weight="0.96015936" />
+      <window_info anchor="bottom" id="Messages" order="3" weight="0.32934928" />
+      <window_info anchor="bottom" id="Java Enterprise" order="4" />
+      <window_info anchor="bottom" id="Database Changes" order="5" />
+      <window_info anchor="bottom" id="Version Control" order="6" />
+      <window_info anchor="bottom" id="Spring" order="7" />
+      <window_info anchor="bottom" id="Message" order="8" />
+      <window_info anchor="bottom" id="Find" order="9" weight="0.32934928" />
+      <window_info anchor="bottom" id="Run" order="10" sideWeight="0.49856734" weight="0.45683932" />
+      <window_info anchor="bottom" id="Debug" order="11" sideWeight="0.49856734" weight="0.4555113" />
+      <window_info anchor="bottom" id="Cvs" order="12" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="13" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="14" />
+      <window_info anchor="right" id="Coverage" order="0" sideWeight="0.50487804" side_tool="true" weight="0.3295129" />
+      <window_info anchor="right" id="Palette" order="1" />
+      <window_info anchor="right" id="Capture Analysis" order="2" />
+      <window_info anchor="right" id="Maven" order="3" sideWeight="0.49512196" weight="0.3295129" />
+      <window_info anchor="right" id="Database" order="4" sideWeight="0.49756098" weight="0.3295129" />
+      <window_info anchor="right" id="Palette&#9;" order="5" />
+      <window_info anchor="right" id="Theme Preview" order="6" />
+      <window_info anchor="right" id="Bean Validation" order="7" weight="0.3295129" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="8" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="9" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="10" weight="0.25" />
+    </layout-to-restore>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/im_user_server_core$ESBServerApplication.ic" NAME="ESBServerApplication Coverage Results" MODIFIED="1592233594600" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.esb.im.server.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/im_user_server_core$IMFileApplication.ic" NAME="IMFileApplication Coverage Results" MODIFIED="1592223935165" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/../esb-server/src/main/resources/static/js/frame.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../esb-server/src/main/resources/static/css/jquerybootstrapcss.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="251">
+          <caret line="16" column="16" lean-forward="true" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../esb-server/src/main/java/com/esb/im/server/config/SpringConfigClass.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../esb-server/src/main/java/com/esb/im/server/config/WebMvcConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="14" column="1" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../esb-server/src/main/java/com/esb/im/server/config/ConfigAdapter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="17" column="1" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../esb-server/src/main/java/com/esb/im/server/service/IMLoginService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="15" column="1" lean-forward="true" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../esb-server/src/main/java/com/esb/im/server/domain/IMLoginDO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="19" column="29" selection-start-line="19" selection-start-column="19" selection-end-line="19" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../esb-server/src/main/java/com/esb/im/server/dao/IMLoginMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="14" column="20" selection-start-line="14" selection-start-column="20" selection-end-line="14" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../esb-server/src/main/java/com/esb/im/server/serviceimpl/IMLoginServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="287">
+          <caret line="28" column="36" selection-start-line="28" selection-start-column="29" selection-end-line="28" selection-end-column="36" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#839#840#0" expanded="true" />
+            <element signature="e#885#886#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../esb-server/src/main/java/com/esb/im/server/controller/ViewController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="22" column="27" lean-forward="true" selection-start-line="22" selection-start-column="27" selection-end-line="22" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../esb-server/src/main/resources/mapper/IMLoginMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="577">
+          <caret line="43" column="11" lean-forward="true" selection-start-line="27" selection-start-column="2" selection-end-line="43" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../esb-server/src/main/java/com/esb/im/server/request/IMLoginParam.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../esb-server/src/main/resources/static/js/myfunctions.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="241">
+          <caret line="270" column="4" selection-start-line="270" selection-start-column="4" selection-end-line="270" selection-end-column="4" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="e#87#94#1" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="e#87#94#1" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="e#87#94#1" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="e#87#94#1" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="e#87#94#1" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../esb-server/src/main/resources/templates/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="13" column="7" lean-forward="true" selection-start-line="13" selection-start-column="7" selection-end-line="13" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../esb-server/src/main/resources/templates/one_set.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="117" column="26" lean-forward="true" selection-start-line="117" selection-start-column="26" selection-end-line="117" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../esb-server/src/main/resources/templates/admin-edit.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1770">
+          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../esb-server/src/main/resources/templates/admin-add.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="458">
+          <caret line="98" column="46" selection-start-line="98" selection-start-column="46" selection-end-line="98" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../esb-server/src/main/resources/static/js/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2113">
+          <caret line="225" column="30" lean-forward="true" selection-start-line="225" selection-start-column="30" selection-end-line="225" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../esb-server/src/main/java/com/esb/im/server/system/HttpRequester.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="252">
+          <caret line="72" column="59" selection-start-line="72" selection-start-column="49" selection-end-line="72" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../esb-server/src/main/java/com/esb/im/server/system/InterfaceBean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="31" column="42" selection-start-line="31" selection-start-column="42" selection-end-line="31" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../esb-server/src/main/java/com/esb/im/server/controller/ESBController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="320">
+          <caret line="75" column="58" lean-forward="true" selection-start-line="75" selection-start-column="8" selection-end-line="75" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../esb-server/src/main/java/com/esb/im/server/request/IMApiIdParam.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="6" column="28" lean-forward="true" selection-start-line="6" selection-start-column="28" selection-end-line="6" selection-end-column="28" />
+          <folding>
+            <element signature="e#142#143#0" expanded="true" />
+            <element signature="e#179#180#0" expanded="true" />
+            <element signature="e#207#208#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../esb-server/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="11" column="25" lean-forward="true" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../esb-server/src/main/java/com/esb/im/server/listener/StartListener.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="20" column="9" lean-forward="true" selection-start-line="20" selection-start-column="9" selection-end-line="20" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../esb-server/src/main/resources/templates/article-list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="39" column="32" lean-forward="true" selection-start-line="39" selection-start-column="32" selection-end-line="39" selection-end-column="32" />
+          <folding>
+            <element signature="n#style#0;n#a#1;n#td#7;n#tr#0;n#tbody#0;n#table#0;n#div#2;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../esb-server/src/main/resources/templates/admin-list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="40" column="33" lean-forward="true" selection-start-line="40" selection-start-column="33" selection-end-line="40" selection-end-column="33" />
+          <folding>
+            <element signature="n#style#0;n#td#1;n#tr#0;n#tbody#0;n#table#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#2;n#tr#0;n#tbody#0;n#table#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#3;n#tr#0;n#tbody#0;n#table#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../esb-server/src/main/java/com/esb/im/server/dao/IMApiMapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="12" column="28" selection-start-line="12" selection-start-column="28" selection-end-line="12" selection-end-column="43" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../esb-server/src/main/resources/mapper/IMApiMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="46" lean-forward="true" selection-start-line="2" selection-start-column="46" selection-end-line="2" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../esb-server/src/main/resources/templates/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="157">
+          <caret line="70" column="80" lean-forward="true" selection-start-line="70" selection-start-column="80" selection-end-line="70" selection-end-column="80" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../esb-server/src/main/resources/templates/articlesend.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="290">
+          <caret line="59" column="55" lean-forward="true" selection-start-line="59" selection-start-column="55" selection-end-line="59" selection-end-column="55" />
+          <folding>
+            <element signature="n#style#0;n#textarea#0;n#div#0;n#div#4;n#div#0;n#div#0;n#div#0;n#form#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../esb-server/src/main/java/com/esb/im/server/domain/IMApiDO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="21" column="27" selection-start-line="21" selection-start-column="20" selection-end-line="21" selection-end-column="27" />
+          <folding>
+            <element signature="e#441#442#0" expanded="true" />
+            <element signature="e#471#472#0" expanded="true" />
+            <element signature="e#518#519#0" expanded="true" />
+            <element signature="e#556#557#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../im-getway-server/im-getway-user/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="17" selection-start-column="12" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../esb-server/src/main/java/com/esb/im/server/service/IMApiService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="14" column="16" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="16" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../esb-server/src/main/resources/templates/articleadd.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-375">
+          <caret line="92" column="89" selection-start-line="92" selection-start-column="82" selection-end-line="92" selection-end-column="89" />
+          <folding>
+            <element signature="n#style#0;n#div#4;n#div#0;n#div#0;n#form#0;n#div#0;n#body#0;n#html#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../im-getway-server/im-getway-user/src/main/java/com/im/getway/server/request/SysIlonwSaveUserParam.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../esb-server/src/main/java/com/esb/im/server/controller/PageViewController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="56" column="5" lean-forward="true" selection-start-line="56" selection-start-column="5" selection-end-line="56" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1234#1235#0" expanded="true" />
+            <element signature="e#1268#1269#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../esb-server/src/main/java/com/esb/im/server/request/IMApiParam.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+          <folding>
+            <element signature="e#314#315#0" expanded="true" />
+            <element signature="e#344#345#0" expanded="true" />
+            <element signature="e#391#392#0" expanded="true" />
+            <element signature="e#429#430#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../im-getway-server/im-getway-user/src/main/java/com/im/getway/server/request/IlonwLoginParam.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="16" column="66" lean-forward="true" selection-start-line="16" selection-start-column="66" selection-end-line="16" selection-end-column="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../esb-server/src/main/java/com/esb/im/server/serviceimpl/IMApiServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="249">
+          <caret line="30" column="17" lean-forward="true" selection-start-line="30" selection-start-column="17" selection-end-line="30" selection-end-column="17" />
+          <folding>
+            <element signature="e#906#907#0" expanded="true" />
+            <element signature="e#952#953#0" expanded="true" />
+            <element signature="e#1007#1008#0" expanded="true" />
+            <element signature="e#1052#1053#0" expanded="true" />
+            <element signature="e#1110#1111#0" expanded="true" />
+            <element signature="e#1158#1159#0" expanded="true" />
+            <element signature="e#1216#1217#0" expanded="true" />
+            <element signature="e#1264#1265#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../esb-server/src/main/java/com/esb/im/server/controller/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="126" column="42" lean-forward="true" selection-start-line="126" selection-start-column="42" selection-end-line="126" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../im-getway-server/im-getway-user/src/main/java/com/im/getway/server/request/CheckPhoneParam.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../im-getway-server/im-getway-user/src/main/java/com/im/getway/server/request/ForgetPassParam.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/im-user-server-dal/src/main/java/com/im/user/server/page/PageData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../im-getway-server/im-getway-user/src/main/java/com/im/getway/server/service/impl/IMUserServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="249">
+          <caret line="172" column="31" selection-start-line="172" selection-start-column="31" selection-end-line="172" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../im-getway-server/im-getway-user/src/main/java/com/im/getway/server/request/UserIdParam.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="9" column="26" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../im-getway-server/im-getway-user/src/main/java/com/im/getway/server/controller/IMUserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="33" column="34" selection-start-line="33" selection-start-column="34" selection-end-line="33" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../document/sql/im-esb-api.sql">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../document/document/ESB.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor>
+            <caret column="32" lean-forward="true" selection-start-column="32" selection-end-column="32" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../document/document/im-server-tools.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor>
+            <caret column="29" selection-start-column="29" selection-end-column="29" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../document/document/im-user-server-core.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="76">
+            <caret line="4" column="18" lean-forward="true" selection-end-line="4" selection-end-column="18" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../document/document/im-file-server-core.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="76">
+            <caret line="4" column="18" lean-forward="true" selection-start-line="4" selection-start-column="18" selection-end-line="4" selection-end-column="18" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>im-file-server-core-dubbo</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

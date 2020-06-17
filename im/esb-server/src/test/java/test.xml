@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SERVICE>
+    <HEAD>
+        <SYS_HEAD>
+            <SYS_CHANNEL_ID>10020191008200300</SYS_CHANNEL_ID>
+            <SYS_CHANNEL_NAME>ilonw商城系统</SYS_CHANNEL_NAME>
+            <SYS_DATE>20200614</SYS_DATE>
+            <SYS_TIME>025020</SYS_TIME>
+            <SYS_SERIAL>12020061402502042999996</SYS_SERIAL>
+            <APP_IP>192.168.0.1</APP_IP>
+        </SYS_HEAD>
+        <ENCRYPTION_HEAD>
+            <APP_ID>111</APP_ID>
+            <APP_KEY>222</APP_KEY>
+            <APP_PUBLIC_KEY>333</APP_PUBLIC_KEY>
+            <APP_PRIVATE_KEY>444</APP_PRIVATE_KEY>
+        </ENCRYPTION_HEAD>
+    </HEAD>
+    <BODY>
+        <phone>1762166876</phone>
+    </BODY>
+</SERVICE>

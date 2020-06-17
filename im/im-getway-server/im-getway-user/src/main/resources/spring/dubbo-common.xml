@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	   xmlns:context="http://www.springframework.org/schema/context"
+	   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	   xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
+	   xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://code.alibabatech.com/schema/dubbo
+       http://code.alibabatech.com/schema/dubbo/dubbo.xsd
+		http://www.springframework.org/schema/context
+		http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<!--定义提供方应用信息，用于计算依赖关系；在 dubbo-admin 或 dubbo-monitor 会显示该名字，方便识别-->
+	<dubbo:application name="im-user-api" logger="slf4j"/>
+
+	<!-- 如果不使用 zookeeper 等服务注册中心，则启动如下配置即可，注意不能省去 -->
+	<dubbo:registry id="zkRegistry" protocol="zookeeper" address="${dubbo.registry.address}" />
+
+	<dubbo:consumer loadbalance="random" cluster="failfast" retries="0" timeout="${dubbo.timeout}"/>
+</beans>

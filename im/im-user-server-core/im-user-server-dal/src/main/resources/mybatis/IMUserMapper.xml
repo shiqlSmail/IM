@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.im.user.server.repository.IMUserRepository">
+
+	<resultMap id="BaseResultMap" type="com.im.user.server.domain.IMUserEntity">
+		<id column="im_user_id" jdbcType="VARCHAR" property="imUserId" />
+		<result column="im_user_code" jdbcType="VARCHAR" property="imUserCode" />
+		<result column="im_user_nikename" jdbcType="VARCHAR" property="imUserNikename" />
+		<result column="im_user_name" jdbcType="VARCHAR" property="imUserName" />
+		<result column="im_user_sex" jdbcType="INTEGER" property="imUserSex" />
+		<result column="im_user_age" jdbcType="INTEGER" property="imUserAge" />
+		<result column="im_user_brithday" jdbcType="VARCHAR" property="imUserBrithday" />
+		<result column="im_user_createtime" jdbcType="TIMESTAMP" property="imUserCreatetime" />
+		<result column="im_user_status" jdbcType="INTEGER" property="imUserStatus" />
+		<result column="im_user_address" jdbcType="VARCHAR" property="imUserAddress" />
+		<result column="im_user_ip" jdbcType="VARCHAR" property="imUserIp" />
+		<result column="im_user_image" jdbcType="VARCHAR" property="imUserImage" />
+		<result column="im_user_phone" jdbcType="VARCHAR" property="imUserPhone" />
+		<result column="im_user_email" jdbcType="VARCHAR" property="imUserEmail" />
+		<result column="im_user_password" jdbcType="VARCHAR" property="imUserPassword" />
+		<result column="im_user_country" jdbcType="VARCHAR" property="imUserCountry" />
+		<result column="im_user_province" jdbcType="VARCHAR" property="imUserProvince" />
+		<result column="im_user_city" jdbcType="VARCHAR" property="imUserCity" />
+		<result column="im_user_longitude" jdbcType="VARCHAR" property="imUserLongitude" />
+		<result column="im_user_dimension" jdbcType="VARCHAR" property="imUserDimension" />
+	</resultMap>
+
+	<sql id="findIMUserColumn">
+		im_user_id,im_user_code,im_user_nikename,im_user_name,im_user_sex,im_user_age,im_user_brithday,im_user_createtime,im_user_status,
+		im_user_address,im_user_ip,im_user_image,im_user_phone,im_user_email,im_user_password,im_user_country,im_user_province,im_user_city,
+		im_user_longitude,im_user_dimension
+	</sql>
+
+	<!-- 查询所有用户 -->
+	<select id="findAllIMUserInfo" resultMap="BaseResultMap">
+		select <include refid="findIMUserColumn"/>  from im_user
+	</select>
+
+	<!-- 查询所有用户的条数 -->
+	<select id="countAllIMUserInfo" resultType="java.lang.Integer">
+		select count(*)  from im_user
+	</select>
+
+	<select id="checkIMUserByPhoneAndEmailAndCodeExits" resultType="java.lang.Integer" parameterType="com.im.user.server.domain.IMUserEntity">
+		select count(*) from im_user t
+		where t.im_user_phone = #{imUserPhone,jdbcType=VARCHAR}
+	</select>
+
+	<!-- 用户登录  根据手机号密码 -->
+	<select id="loginIMUserByPhoneAndEmailAndCode" resultType="com.im.user.server.domain.IMUserEntity" parameterType="com.im.user.server.domain.IMUserEntity">
+		select <include refid="findIMUserColumn"/>  from im_user t
+		where t.im_user_phone = #{imUserPhone,jdbcType=VARCHAR} and t.im_user_password = #{imUserPassword,jdbcType=VARCHAR}
+	</select>
+
+	<!-- 用户登录  根据手机号验证码 -->
+	<select id="loginIMUserByPhoneAndSMSCode" resultType="com.im.user.server.domain.IMUserEntity" parameterType="com.im.user.server.domain.IMUserEntity">
+		select <include refid="findIMUserColumn"/> from im_user t
+		where t.im_user_phone = #{imUserPhone,jdbcType=VARCHAR}
+	</select>
+
+	<select id="checkIMUserByPhoneExits" resultType="java.lang.Integer" parameterType="com.im.user.server.domain.IMUserEntity">
+		select count(*) from im_user t
+		where t.im_user_phone = #{imUserPhone,jdbcType=VARCHAR}
+	</select>
+
+	<select id="checkIMUserByEmailExits" resultType="java.lang.Integer" parameterType="com.im.user.server.domain.IMUserEntity">
+		select count(*) from im_user t
+		where t.im_user_email = #{imUserEmail,jdbcType=VARCHAR}
+	</select>
+
+	<!-- 根据用户ID查询用户信息 -->
+	<select id="loginIMUserById" resultType="com.im.user.server.domain.IMUserEntity" parameterType="com.im.user.server.domain.IMUserEntity">
+		select <include refid="findIMUserColumn"/> from im_user t
+		where t.im_user_id = #{imUserId,jdbcType=VARCHAR}
+	</select>
+
+	<select id="checkIMUserByCodeExits" resultType="java.lang.Integer" parameterType="com.im.user.server.domain.IMUserEntity">
+		select count(*) from im_user t
+		where t.im_user_code = #{imUserCode,jdbcType=VARCHAR}
+	</select>
+
+	<insert id="saveIMUserInfo" parameterType="com.im.user.server.domain.IMUserEntity" useGeneratedKeys="true">
+		insert into im_user
+		<trim prefix="(" suffix=")" suffixOverrides=",">
+			<if test="imUserId != null">
+				im_user_id,
+			</if>
+			<if test="imUserCode != null">
+				im_user_code,
+			</if>
+			<if test="imUserNikename != null">
+				im_user_nikename,
+			</if>
+			<if test="imUserName != null">
+				im_user_name,
+			</if>
+			<if test="imUserSex != null">
+				im_user_sex,
+			</if>
+			<if test="imUserAge != null">
+				im_user_age,
+			</if>
+			<if test="imUserBrithday != null">
+				im_user_brithday,
+			</if>
+			<if test="imUserCreatetime != null">
+				im_user_createtime,
+			</if>
+			<if test="imUserStatus != null">
+				im_user_status,
+			</if>
+			<if test="imUserAddress != null">
+				im_user_address,
+			</if>
+			<if test="imUserIp != null">
+				im_user_ip,
+			</if>
+			<if test="imUserImage != null">
+				im_user_image,
+			</if>
+			<if test="imUserPhone != null">
+				im_user_phone,
+			</if>
+			<if test="imUserEmail != null">
+				im_user_email,
+			</if>
+			<if test="imUserPassword != null">
+				im_user_password,
+			</if>
+			<if test="imUserCountry != null">
+				im_user_country,
+			</if>
+			<if test="imUserProvince != null">
+				im_user_province,
+			</if>
+			<if test="imUserCity != null">
+				im_user_city,
+			</if>
+			<if test="imUserLongitude != null">
+				im_user_longitude,
+			</if>
+			<if test="imUserDimension != null">
+				im_user_dimension,
+			</if>
+		</trim>
+		<trim prefix="values (" suffix=")" suffixOverrides=",">
+			<if test="imUserId != null">
+				#{imUserId,jdbcType=VARCHAR},
+			</if>
+			<if test="imUserCode != null">
+				#{imUserCode,jdbcType=VARCHAR},
+			</if>
+			<if test="imUserNikename != null">
+				#{imUserNikename,jdbcType=VARCHAR},
+			</if>
+			<if test="imUserName != null">
+				#{imUserName,jdbcType=VARCHAR},
+			</if>
+			<if test="imUserSex != null">
+				#{imUserSex,jdbcType=INTEGER},
+			</if>
+			<if test="imUserAge != null">
+				#{imUserAge,jdbcType=INTEGER},
+			</if>
+			<if test="imUserBrithday != null">
+				#{imUserBrithday,jdbcType=VARCHAR},
+			</if>
+			<if test="imUserCreatetime != null">
+				#{imUserCreatetime,jdbcType=TIMESTAMP},
+			</if>
+			<if test="imUserStatus != null">
+				#{imUserStatus,jdbcType=INTEGER},
+			</if>
+			<if test="imUserAddress != null">
+				#{imUserAddress,jdbcType=VARCHAR},
+			</if>
+			<if test="imUserIp != null">
+				#{imUserIp,jdbcType=VARCHAR},
+			</if>
+			<if test="imUserImage != null">
+				#{imUserImage,jdbcType=VARCHAR},
+			</if>
+			<if test="imUserPhone != null">
+				#{imUserPhone,jdbcType=VARCHAR},
+			</if>
+			<if test="imUserEmail != null">
+				#{imUserEmail,jdbcType=VARCHAR},
+			</if>
+			<if test="imUserPassword != null">
+				#{imUserPassword,jdbcType=VARCHAR},
+			</if>
+			<if test="imUserCountry != null">
+				#{im_user_country,jdbcType=VARCHAR},
+			</if>
+			<if test="imUserProvince != null">
+				#{im_user_province,jdbcType=VARCHAR},
+			</if>
+			<if test="imUserCity != null">
+				#{im_user_city,jdbcType=VARCHAR},
+			</if>
+			<if test="imUserLongitude != null">
+				#{im_user_longitude,jdbcType=VARCHAR},
+			</if>
+			<if test="imUserDimension != null">
+				#{im_user_dimension,jdbcType=VARCHAR},
+			</if>
+		</trim>
+	</insert>
+
+	<update id="updateIMUserPasswordById" parameterType="com.im.user.server.domain.IMUserEntity">
+		update im_user set im_user_password = #{imUserPassword,jdbcType=VARCHAR} where im_user_id = #{imUserId,jdbcType=VARCHAR}
+	</update>
+
+	<!-- 管理员冻结用户 -->
+	<update id="updateIMUserStatus" parameterType="com.im.user.server.domain.IMUserEntity">
+		update im_user set im_user_status = #{imUserStatus,jdbcType=INTEGER} where im_user_id = #{imUserId,jdbcType=VARCHAR}
+	</update>
+</mapper>
