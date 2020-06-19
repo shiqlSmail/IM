@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.im.user.server.repository.SysEmailCodeRepository">
+
+	<resultMap id="BaseResultMap" type="com.im.user.server.domain.SysEmailCodeEntity">
+		<id column="email_id" jdbcType="VARCHAR" property="emailId" />
+		<result column="email_code" jdbcType="INTEGER" property="emailCode" />
+		<result column="email_status" jdbcType="INTEGER" property="emailStatus" />
+		<result column="email_createtime" jdbcType="VARCHAR" property="emailCreatetime" />
+		<result column="email_name" jdbcType="VARCHAR" property="emailName" />
+	</resultMap>
+
+	<sql id="findColumnEmailCode">
+		email_code,email_name,email_createtime,email_status
+	</sql>
+
+	<insert id="saveEmailCode" parameterType="com.im.user.server.domain.SysEmailCodeEntity">
+		insert into sys_email
+		<trim prefix="(" suffix=")" suffixOverrides=",">
+			<if test="emailId != null">
+				email_id,
+			</if>
+			<if test="emailCode != null">
+				email_code,
+			</if>
+			<if test="emailStatus != null">
+				email_status,
+			</if>
+			<if test="emailCreatetime != null">
+				email_createtime,
+			</if>
+			<if test="emailName != null">
+				email_name,
+			</if>
+		</trim>
+		<trim prefix="values (" suffix=")" suffixOverrides=",">
+			<if test="emailId != null">
+				#{emailId,jdbcType=VARCHAR},
+			</if>
+			<if test="emailCode != null">
+				#{emailCode,jdbcType=INTEGER},
+			</if>
+			<if test="emailStatus != null">
+				#{emailStatus,jdbcType=INTEGER},
+			</if>
+			<if test="emailCreatetime != null">
+				#{emailCreatetime,jdbcType=VARCHAR},
+			</if>
+			<if test="emailName != null">
+				#{emailName,jdbcType=VARCHAR},
+			</if>
+		</trim>
+	</insert>
+
+	<select id="findEmailCodeByEmailName" resultType="com.im.user.server.domain.SysEmailCodeEntity" parameterType="com.im.user.server.domain.SysEmailCodeEntity">
+		select  <include refid="findColumnEmailCode"/>  from sys_email where email_name = #{emailName,jdbcType=VARCHAR}
+	</select>
+
+	<update id="updateEmailCode">
+		update sys_email set email_status = 2  where  now() >SUBDATE(sys_email.email_createtime,interval -5 minute) and email_status != 2
+	</update>
+
+	<update id="updateEmailCodeByEmailName" parameterType="com.im.user.server.domain.SysEmailCodeEntity">
+		update sys_email set email_status = 2  where  email_name = #{emailName,jdbcType=VARCHAR} and email_id != #{emailId,jdbcType=VARCHAR}
+	</update>
+</mapper>

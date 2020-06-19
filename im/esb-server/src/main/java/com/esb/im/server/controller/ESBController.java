@@ -1,5 +1,6 @@
 package com.esb.im.server.controller;
 
+import com.alibaba.druid.util.StringUtils;
 import com.alibaba.fastjson.JSON;
 import com.alibaba.fastjson.JSONObject;
 import com.esb.im.server.domain.IMApiDO;
@@ -73,15 +74,22 @@ public class ESBController extends InterfaceBean {
 
 
     private Object getResult(String response){
-        JSONObject obj = JSONObject.parseObject(response);
+        JSONObject jsonObject = JSONObject.parseObject(response);
         Object  str = null;
-        Integer  code = (Integer)obj.get("status");
+        Integer  code = (Integer)jsonObject.get("status");
         if(code == 200){
-            str = obj.get("data");
+            String resDataStr = String.valueOf(jsonObject.get("data"));
+            JSONObject resDataJSON = JSONObject.parseObject(resDataStr);
+            String  resCode = (String)resDataJSON.get("resCode");
+            if(StringUtils.equals(resCode,"000000")){
+                str = resDataJSON.get("resData");
+            }else{
+                str = resDataStr;
+            }
         }else if(code == 100101){
-            str = obj.get("data");
+            str = jsonObject.get("data");
         }else{
-            str = obj.get("msg");
+            str = jsonObject.get("msg");
         }
         log.info("返回的数据为："+str);
         return str;

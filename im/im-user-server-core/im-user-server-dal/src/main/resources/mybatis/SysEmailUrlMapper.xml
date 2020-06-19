@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.im.user.server.repository.SysEmailUrlRepository">
+
+	<resultMap id="BaseResultMap" type="com.im.user.server.domain.SysEmailUrlEntity">
+		<id column="email_id" jdbcType="VARCHAR" property="emailId" />
+		<result column="email_url" jdbcType="VARCHAR" property="emailUrl" />
+		<result column="email_status" jdbcType="INTEGER" property="emailStatus" />
+		<result column="email_createtime" jdbcType="VARCHAR" property="emailCreatetime" />
+		<result column="email_name" jdbcType="VARCHAR" property="emailName" />
+	</resultMap>
+
+	<sql id="findColumnEmailUrl">
+		email_url,email_name,email_createtime,email_status
+	</sql>
+
+	<insert id="saveEmailUrl" parameterType="com.im.user.server.domain.SysEmailUrlEntity">
+		insert into sys_emailurl
+		<trim prefix="(" suffix=")" suffixOverrides=",">
+			<if test="emailId != null">
+				email_id,
+			</if>
+			<if test="emailUrl != null">
+				email_url,
+			</if>
+			<if test="emailStatus != null">
+				email_status,
+			</if>
+			<if test="emailCreatetime != null">
+				email_createtime,
+			</if>
+			<if test="emailName != null">
+				email_name,
+			</if>
+		</trim>
+		<trim prefix="values (" suffix=")" suffixOverrides=",">
+			<if test="emailId != null">
+				#{emailId,jdbcType=VARCHAR},
+			</if>
+			<if test="emailUrl != null">
+				#{emailUrl,jdbcType=VARCHAR},
+			</if>
+			<if test="emailStatus != null">
+				#{emailStatus,jdbcType=INTEGER},
+			</if>
+			<if test="emailCreatetime != null">
+				#{emailCreatetime,jdbcType=TIMESTAMP},
+			</if>
+			<if test="emailName != null">
+				#{emailName,jdbcType=VARCHAR},
+			</if>
+		</trim>
+	</insert>
+
+	<select id="findEmailByEmailUrl" resultType="com.im.user.server.domain.SysEmailUrlEntity" parameterType="com.im.user.server.domain.SysEmailUrlEntity">
+		select <include refid="findColumnEmailUrl"/> from sys_emailurl where email_name = #{emailName,jdbcType=VARCHAR}
+	</select>
+</mapper>

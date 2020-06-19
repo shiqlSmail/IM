@@ -63,7 +63,7 @@ public class IMUserServiceImpl extends BaseService implements IMUserService {
             return getBaseResultMaps(UserEunms.LOGIN_CODE_NOTEXITS.getResCode(),UserEunms.LOGIN_CODE_NOTEXITS.getResMsg(),phoneAndEmailAndCodeIsExits);
         }
 
-        IMUserEntity IMUser = imUserRepository.loginIMUserByPhoneAndEmailAndCode(record);
+        IMUserEntity IMUser = imUserRepository.loginIMUserByPhoneAndPassword(record);
         if (StringUtils.isEmpty(IMUser)) {
             return getBaseResultMaps(UserEunms.PASSWORD_FAIL.getResCode(),UserEunms.PASSWORD_FAIL.getResMsg(),IMUser);
         }
@@ -84,7 +84,7 @@ public class IMUserServiceImpl extends BaseService implements IMUserService {
         if (null == phoneAndEmailAndCodeIsExits || phoneAndEmailAndCodeIsExits == 0) {
             return getBaseResultMaps(UserEunms.PHONE_ISNULL.getResCode(),UserEunms.PHONE_ISNULL.getResMsg(),phoneAndEmailAndCodeIsExits);
         }else{
-            IMUserEntity IMUser = imUserRepository.loginIMUserByPhone(record);
+            IMUserEntity IMUser = imUserRepository.loginIMUserByPhoneAndSMSCode(record);
             if (null == IMUser) {
                 return getBaseResultMaps(UserEunms.USER_NULL.getResCode(),UserEunms.USER_NULL.getResMsg(),IMUser);
             } else {

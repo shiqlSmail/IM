@@ -40,6 +40,19 @@ public abstract class BaseController extends ResultResponse {
         }
     }
 
+    public JsonResult getIntefaceDataToJson(Object requestParam,Object object, String responseMethod, long now, String type) {
+        HttpServletRequest request =((ServletRequestAttributes) RequestContextHolder.getRequestAttributes()).getRequest();
+        try {
+            //保存日志
+            saveLogs(request,JSON.toJSON(requestParam),JSON.toJSON(object),responseMethod,"SUCCESS",System.currentTimeMillis() - now,type);
+            return JsonResult.ok(object);
+        } catch (Exception e) {
+            //保存日志
+            saveLogs(request,JSON.toJSON(requestParam),JSON.toJSON(object),responseMethod,"ERROR",System.currentTimeMillis() - now,type);
+            return JsonResult.build(500,"系统正在维护中，请稍后再试",e.getMessage());
+        }
+    }
+
     public void saveLogs(HttpServletRequest requestIp,Object requestParam,Object responseResult, String responseMethod,String resultCode, long now, String type) {
         String selNo = SelNoFactory.getSelNo(1001L);
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");

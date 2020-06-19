@@ -33,14 +33,14 @@ public interface IMUserRepository {
      * @param record
      * @return
      */
-    IMUserEntity loginIMUserByPhoneAndEmailAndCode(IMUserEntity record);
+    IMUserEntity loginIMUserByPhoneAndPassword(IMUserEntity record);
 
     /**
      * 用户登录  根据手机号验证码
      * @param record
      * @return
      */
-    IMUserEntity loginIMUserByPhone(IMUserEntity record);
+    IMUserEntity loginIMUserByPhoneAndSMSCode(IMUserEntity record);
 
     /**
      * 检查注册手机号码是否存在

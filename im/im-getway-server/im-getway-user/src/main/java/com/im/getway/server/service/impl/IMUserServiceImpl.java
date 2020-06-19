@@ -44,7 +44,7 @@ public class IMUserServiceImpl extends BaseService implements IMUserService {
                 if("null".equals(str)){  //因为数据是从cacha缓存读取出来的，所以null值判断方式未 “null”
                     return getBaseResultMaps(UserEunms.SMSCODE_EXITS.getResCode(),UserEunms.SMSCODE_EXITS.getResMsg(),"");
                 }else{
-                    if(param.getSmscode() != str || !param.getSmscode().equals(str)) {
+                    if(!StringUtils.equals(param.getSmscode(),str)) {
                         return getBaseResultMaps(UserEunms.SMSCODE_NOTNULL.getResCode(),UserEunms.SMSCODE_NOTNULL.getResMsg(),"");
                     }
                     record.setImUserPhone(param.getPhone());

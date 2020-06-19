@@ -14,7 +14,7 @@ import java.util.Map;
 public class ResultResponse{
 	protected final Logger log = LoggerFactory.getLogger(this.getClass());
 
-	protected APIBaseResult getAPIResult(APIBaseResult result) {
+	protected JsonResult getAPIResult(JsonResult result) {
 		return result;
 	}
 

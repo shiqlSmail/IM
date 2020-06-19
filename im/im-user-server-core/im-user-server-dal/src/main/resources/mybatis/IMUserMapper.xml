@@ -47,7 +47,7 @@
 	</select>
 
 	<!-- 用户登录  根据手机号密码 -->
-	<select id="loginIMUserByPhoneAndEmailAndCode" resultType="com.im.user.server.domain.IMUserEntity" parameterType="com.im.user.server.domain.IMUserEntity">
+	<select id="loginIMUserByPhoneAndPassword" resultType="com.im.user.server.domain.IMUserEntity" parameterType="com.im.user.server.domain.IMUserEntity">
 		select <include refid="findIMUserColumn"/>  from im_user t
 		where t.im_user_phone = #{imUserPhone,jdbcType=VARCHAR} and t.im_user_password = #{imUserPassword,jdbcType=VARCHAR}
 	</select>

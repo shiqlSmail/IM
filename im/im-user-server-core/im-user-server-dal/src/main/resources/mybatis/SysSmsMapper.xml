@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.im.user.server.repository.SysSmsRepository">
+
+	<resultMap id="BaseResultMap" type="com.im.user.server.domain.SysSmsEntity">
+		<id column="sms_id" jdbcType="VARCHAR" property="smsId" />
+		<result column="sms_code" jdbcType="INTEGER" property="smsCode" />
+		<result column="sms_status" jdbcType="INTEGER" property="smsStatus" />
+		<result column="sms_createtime" jdbcType="VARCHAR" property="smsCreatetime" />
+		<result column="sms_phone" jdbcType="VARCHAR" property="smsPhone" />
+	</resultMap>
+
+	<sql id="findColumnSms">
+		sms_code,sms_status,sms_createtime,sms_phone
+	</sql>
+	
+	<insert id="saveSms" parameterType="com.im.user.server.domain.SysSmsEntity">
+		insert into sys_sms
+		<trim prefix="(" suffix=")" suffixOverrides=",">
+			<if test="smsId != null">
+				sms_id,
+			</if>
+			<if test="smsCode != null">
+				sms_code,
+			</if>
+			<if test="smsStatus != null">
+				sms_status,
+			</if>
+			<if test="smsCreatetime != null">
+				sms_createtime,
+			</if>
+			<if test="smsPhone != null">
+				sms_phone,
+			</if>
+		</trim>
+		<trim prefix="values (" suffix=")" suffixOverrides=",">
+			<if test="smsId != null">
+				#{smsId,jdbcType=VARCHAR},
+			</if>
+			<if test="smsCode != null">
+				#{smsCode,jdbcType=INTEGER},
+			</if>
+			<if test="smsStatus != null">
+				#{smsStatus,jdbcType=INTEGER},
+			</if>
+			<if test="smsCreatetime != null">
+				#{smsCreatetime,jdbcType=VARCHAR},
+			</if>
+			<if test="smsPhone != null">
+				#{smsPhone,jdbcType=VARCHAR},
+			</if>
+		</trim>
+	</insert>
+	
+	<select id="findSmsByPhone" resultType="com.im.user.server.domain.SysSmsEntity" parameterType="com.im.user.server.domain.SysSmsEntity">
+		select <include refid="findColumnSms"/> from sys_sms where sms_phone = #{smsPhone,jdbcType=VARCHAR}
+	</select>
+
+	<update id="updateSms">
+		update sys_sms set sms_status = 2  where  now() >SUBDATE(sys_sms.sms_createtime,interval -1 minute) and sms_status != 2
+	</update>
+
+	<update id="updateSmsByPhone" parameterType="com.im.user.server.domain.SysSmsEntity">
+		update sys_sms set sms_status = 2  where  sms_phone = #{smsPhone,jdbcType=VARCHAR} and sms_id != #{smsId,jdbcType=VARCHAR}
+	</update>
+</mapper>

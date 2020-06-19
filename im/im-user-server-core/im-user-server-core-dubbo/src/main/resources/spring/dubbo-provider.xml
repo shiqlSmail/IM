@@ -13,4 +13,7 @@
 
 	<!--  用户服务注册中心 -->
 	<dubbo:service interface="com.im.user.server.facade.IMUserFacade" ref="imUserFacade"/>
+
+	<!--  短信/邮箱服务注册中心 -->
+	<dubbo:service interface="com.im.user.server.facade.SysSmsFacade" ref="sysSmsFacade"/>
 </beans>

@@ -38,7 +38,7 @@ public class IMUserServiceFacade implements IMUserFacade {
      * @return
      */
     public Map<String, Object> loginIMUserByPhone(IMUserEntity record) {
-        return imUserService.checkIMUserByPhoneExits(record);
+        return imUserService.loginIMUserByPhone(record);
     }
 
     /**
