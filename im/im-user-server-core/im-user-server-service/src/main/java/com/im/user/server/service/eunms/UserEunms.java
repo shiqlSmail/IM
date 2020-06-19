@@ -1,6 +1,7 @@
 package com.im.user.server.service.eunms;
 
 public enum UserEunms {
+    ADMIN_SUCCESS("ADMIN_SUCCESS","交易成功"),
     SUCCESS("000000","交易成功"),
     FAIL("999999","交易失败"),
     ERROR("111111","系统异常"),

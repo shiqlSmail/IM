@@ -194,7 +194,7 @@ public class IMUserServiceImpl extends BaseService implements IMUserService {
     public Map<String, Object> updateUserStatus(IMUserEntity record) {
         Integer num = imUserRepository.updateUserStatus(record);
         if (num > 0) {
-            return getBaseResultMaps(UserEunms.SUCCESS.getResCode(),UserEunms.SUCCESS.getResMsg(),num);
+            return getBaseResultMaps(UserEunms.ADMIN_SUCCESS.getResCode(),UserEunms.ADMIN_SUCCESS.getResMsg(),num);
         } else {
             return getBaseResultMaps(UserEunms.FAIL.getResCode(),UserEunms.FAIL.getResMsg(),num);
         }
@@ -210,7 +210,7 @@ public class IMUserServiceImpl extends BaseService implements IMUserService {
     public Map<String, Object> loginIMUserById(IMUserEntity record) {
         IMUserEntity IMUserEntity = imUserRepository.loginIMUserById(record);
         if (!StringUtils.isEmpty(IMUserEntity)) {
-            return getBaseResultMaps(UserEunms.SUCCESS.getResCode(),UserEunms.SUCCESS.getResMsg(),IMUserEntity);
+            return getBaseResultMaps(UserEunms.ADMIN_SUCCESS.getResCode(),UserEunms.ADMIN_SUCCESS.getResMsg(),IMUserEntity);
         } else {
             return getBaseResultMaps(UserEunms.FAIL.getResCode(),UserEunms.FAIL.getResMsg(),IMUserEntity);
         }

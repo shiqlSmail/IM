@@ -10,6 +10,7 @@ import com.esb.im.server.request.IMLoginParam;
 import com.esb.im.server.service.IMApiService;
 import com.esb.im.server.service.IMLoginService;
 import com.esb.im.server.system.InterfaceBean;
+import com.server.tools.result.InterfaceResultData;
 import net.sf.json.JSONObject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -149,7 +150,7 @@ public class UserController  extends InterfaceBean {
 
     @CrossOrigin(origins = "*", maxAge = 3600)
     @RequestMapping(value = "/simulation",method = RequestMethod.POST)
-    public JSONObject simulation(@RequestBody IMApiIdParam imApiIdParam){
+    public com.alibaba.fastjson.JSONObject simulation(@RequestBody IMApiIdParam imApiIdParam){
         try {
             IMApiDO imApiDO = ilonwApiService.selectByPrimaryKey(Integer.valueOf(imApiIdParam.getId()));
             String transCode = imApiDO.getApiTranscode();
@@ -160,10 +161,11 @@ public class UserController  extends InterfaceBean {
             Map<String,Object> map = (Map) JSON.parse(imApiDO.getApiParam());
             String  response = toSendPost(url,map,status);
             log.info("返回的数据为："+response);
-            return  JSONObject.fromObject(response);
+            return InterfaceResultData.getResultToJson(response);
         } catch (Exception e) {
             e.printStackTrace();
             return null;
         }
     }
+
 }

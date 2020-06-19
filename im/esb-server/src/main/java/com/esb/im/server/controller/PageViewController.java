@@ -75,4 +75,10 @@ public class PageViewController {
         model.addAttribute("apiData", imApiDO);
         return "articlesend";
     }
+
+    @RequestMapping(value = "/login_out.htm")
+    public String loginOut(HttpSession session){
+        session.removeAttribute("login_username");
+        return "login";
+    }
 }

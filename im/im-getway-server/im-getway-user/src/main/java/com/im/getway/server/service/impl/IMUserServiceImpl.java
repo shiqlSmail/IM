@@ -75,7 +75,7 @@ public class IMUserServiceImpl extends BaseService implements IMUserService {
         }else{
             listUser = (PageBean)obj;
         }
-        return getBaseResultMaps(UserEunms.SUCCESS.getResCode(),UserEunms.SUCCESS.getResMsg(),listUser);
+        return getBaseResultMaps(UserEunms.ADMIN_SUCCESS.getResCode(),UserEunms.ADMIN_SUCCESS.getResMsg(),listUser);
     }
 
     /**
@@ -165,7 +165,7 @@ public class IMUserServiceImpl extends BaseService implements IMUserService {
     public Map<String, Object> updateUserStatus(UserIdParam param) {
         IMUserEntity imUserEntity = new IMUserEntity();
         imUserEntity.setImUserId(param.getUserId());
-        imUserEntity.setImUserStatus(param.getStatus());
+        imUserEntity.setImUserStatus(Integer.valueOf(param.getStatus()));
         return imUserFacade.updateUserStatus(imUserEntity);
     }
 

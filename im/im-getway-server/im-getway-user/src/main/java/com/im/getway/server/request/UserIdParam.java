@@ -7,5 +7,5 @@ import lombok.Setter;
 @Setter
 public class UserIdParam {
     private String userId;
-    private Integer status;
+    private String status;
 }

@@ -1,12 +1,11 @@
 package com.esb.im.server.controller;
 
-import com.alibaba.druid.util.StringUtils;
 import com.alibaba.fastjson.JSON;
-import com.alibaba.fastjson.JSONObject;
 import com.esb.im.server.domain.IMApiDO;
 import com.esb.im.server.service.IMApiService;
 import com.esb.im.server.system.InterfaceBean;
 import com.esb.im.server.xml.AnalysisFactory;
+import com.server.tools.result.InterfaceResultData;
 import org.dom4j.DocumentException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -43,7 +42,7 @@ public class ESBController extends InterfaceBean {
             Map<String,Object> bodyMap = net.sf.json.JSONObject.fromObject(headMap.get("BODY"));
 
             String  response = toSendPost(url,bodyMap,status);
-            return getResult(response).toString();
+            return InterfaceResultData.getResultToString(response);
         } catch (DocumentException e) {
             e.printStackTrace();
             return null;
@@ -64,34 +63,10 @@ public class ESBController extends InterfaceBean {
             map.remove("trans_code");
             log.info("获取到的URL信息为："+url);
             String  response = toSendPost(url,map,status);
-            return getResult(response).toString();
+            return InterfaceResultData.getResultToString(response);
         } catch (Exception e) {
             e.printStackTrace();
             return null;
         }
-    }
-
-
-
-    private Object getResult(String response){
-        JSONObject jsonObject = JSONObject.parseObject(response);
-        Object  str = null;
-        Integer  code = (Integer)jsonObject.get("status");
-        if(code == 200){
-            String resDataStr = String.valueOf(jsonObject.get("data"));
-            JSONObject resDataJSON = JSONObject.parseObject(resDataStr);
-            String  resCode = (String)resDataJSON.get("resCode");
-            if(StringUtils.equals(resCode,"000000")){
-                str = resDataJSON.get("resData");
-            }else{
-                str = resDataStr;
-            }
-        }else if(code == 100101){
-            str = jsonObject.get("data");
-        }else{
-            str = jsonObject.get("msg");
-        }
-        log.info("返回的数据为："+str);
-        return str;
     }
 }
