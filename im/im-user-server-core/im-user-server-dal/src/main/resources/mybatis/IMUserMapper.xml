@@ -42,41 +42,47 @@
 	</select>
 
 	<select id="checkIMUserByPhoneAndEmailAndCodeExits" resultType="java.lang.Integer" parameterType="com.im.user.server.domain.IMUserEntity">
-		select count(*) from im_user t
-		where t.im_user_phone = #{imUserPhone,jdbcType=VARCHAR}
+		select count(*) from im_user
+		where im_user_phone = #{imUserPhone,jdbcType=VARCHAR}
 	</select>
 
 	<!-- 用户登录  根据手机号密码 -->
 	<select id="loginIMUserByPhoneAndPassword" resultType="com.im.user.server.domain.IMUserEntity" parameterType="com.im.user.server.domain.IMUserEntity">
-		select <include refid="findIMUserColumn"/>  from im_user t
-		where t.im_user_phone = #{imUserPhone,jdbcType=VARCHAR} and t.im_user_password = #{imUserPassword,jdbcType=VARCHAR}
+		select <include refid="findIMUserColumn"/>  from im_user
+		where im_user_phone = #{imUserPhone,jdbcType=VARCHAR} and im_user_password = #{imUserPassword,jdbcType=VARCHAR}
 	</select>
 
 	<!-- 用户登录  根据手机号验证码 -->
 	<select id="loginIMUserByPhoneAndSMSCode" resultType="com.im.user.server.domain.IMUserEntity" parameterType="com.im.user.server.domain.IMUserEntity">
-		select <include refid="findIMUserColumn"/> from im_user t
-		where t.im_user_phone = #{imUserPhone,jdbcType=VARCHAR}
+		select <include refid="findIMUserColumn"/> from im_user
+		where im_user_phone = #{imUserPhone,jdbcType=VARCHAR}
 	</select>
 
 	<select id="checkIMUserByPhoneExits" resultType="java.lang.Integer" parameterType="com.im.user.server.domain.IMUserEntity">
-		select count(*) from im_user t
-		where t.im_user_phone = #{imUserPhone,jdbcType=VARCHAR}
+		select count(*) from im_user
+		where im_user_phone = #{imUserPhone,jdbcType=VARCHAR}
 	</select>
 
 	<select id="checkIMUserByEmailExits" resultType="java.lang.Integer" parameterType="com.im.user.server.domain.IMUserEntity">
-		select count(*) from im_user t
-		where t.im_user_email = #{imUserEmail,jdbcType=VARCHAR}
+		select count(*) from im_user
+		where im_user_email = #{imUserEmail,jdbcType=VARCHAR}
 	</select>
 
 	<!-- 根据用户ID查询用户信息 -->
 	<select id="loginIMUserById" resultType="com.im.user.server.domain.IMUserEntity" parameterType="com.im.user.server.domain.IMUserEntity">
-		select <include refid="findIMUserColumn"/> from im_user t
-		where t.im_user_id = #{imUserId,jdbcType=VARCHAR}
+		select <include refid="findIMUserColumn"/> from im_user
+		where 1=1
+		<if test="imUserId != null">
+			AND im_user_id = #{imUserId,jdbcType=VARCHAR}
+		</if>
+		<if test="imUserPhone != null">
+			AND im_user_phone = #{imUserPhone,jdbcType=VARCHAR}
+		</if>
 	</select>
 
 	<select id="checkIMUserByCodeExits" resultType="java.lang.Integer" parameterType="com.im.user.server.domain.IMUserEntity">
-		select count(*) from im_user t
-		where t.im_user_code = #{imUserCode,jdbcType=VARCHAR}
+		select count(*) from im_user
+		where im_user_code = #{imUserCode,jdbcType=VARCHAR}
 	</select>
 
 	<insert id="saveIMUserInfo" parameterType="com.im.user.server.domain.IMUserEntity" useGeneratedKeys="true">

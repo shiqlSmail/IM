@@ -31,7 +31,7 @@ public class SendSmsController extends BaseController {
     @CrossOrigin(origins = "*", maxAge = 3600)
     @RequestMapping(value = "/sms", produces = "application/json", method = {RequestMethod.POST})
     @ApiOperation(value="发送短信验证码", notes="发送短信接口详细描述")
-    public JsonResult sendSms(@RequestBody @Valid PhoneSmsParam param) {
+    public Map<String, Object> sendSms(@RequestBody @Valid PhoneSmsParam param) {
         long now = System.currentTimeMillis();
         Map<String, Object> map = new HashMap<>();
         try {
@@ -44,7 +44,7 @@ public class SendSmsController extends BaseController {
                 //将短信验证码放入缓存中，存放时间未60秒
                 Cache.put(param.getPhone(),code,60000);
 
-                map.put("resCode", "SUCCESS");
+                map.put("resCode", "BIZ_ADMIN_SUCCESS");
                 map.put("resMsg", "success");
                 map.put("resData", code);
 

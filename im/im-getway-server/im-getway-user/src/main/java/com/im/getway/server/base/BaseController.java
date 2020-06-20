@@ -27,17 +27,16 @@ public abstract class BaseController extends ResultResponse {
     @Resource
     SysIMUserLogsFacade sysIMUserLogsFacade;
 
-    public JsonResult getIntefaceData(Object requestParam,Map<String, Object> responseResult, String responseMethod, long now, String type) {
+    public Map<String,Object> getIntefaceData(Object requestParam,Map<String, Object> responseResult, String responseMethod, long now, String type) {
         HttpServletRequest request =((ServletRequestAttributes) RequestContextHolder.getRequestAttributes()).getRequest();
         try {
             //保存日志
             saveLogs(request,JSON.toJSON(requestParam),JSON.toJSON(responseResult),responseMethod,"SUCCESS",System.currentTimeMillis() - now,type);
-            return JsonResult.ok(responseResult);
         } catch (Exception e) {
             //保存日志
             saveLogs(request,JSON.toJSON(requestParam),JSON.toJSON(responseResult),responseMethod,"ERROR",System.currentTimeMillis() - now,type);
-            return JsonResult.build(500,"系统正在维护中，请稍后再试",e.getMessage());
         }
+        return responseResult;
     }
 
     public JsonResult getIntefaceDataToJson(Object requestParam,Object object, String responseMethod, long now, String type) {

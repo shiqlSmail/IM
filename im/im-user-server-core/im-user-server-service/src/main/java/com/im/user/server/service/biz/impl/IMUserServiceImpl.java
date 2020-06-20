@@ -60,14 +60,14 @@ public class IMUserServiceImpl extends BaseService implements IMUserService {
         Integer phoneAndEmailAndCodeIsExits = imUserRepository.checkIMUserByPhoneAndEmailAndCodeExits(record);
 
         if (phoneAndEmailAndCodeIsExits.equals(0)) {
-            return getBaseResultMaps(UserEunms.LOGIN_CODE_NOTEXITS.getResCode(),UserEunms.LOGIN_CODE_NOTEXITS.getResMsg(),phoneAndEmailAndCodeIsExits);
+            return getBaseResultMaps(UserEunms.SYS_LOGIN_CODE_NOTEXITS.getResCode(),UserEunms.SYS_LOGIN_CODE_NOTEXITS.getResMsg(),phoneAndEmailAndCodeIsExits);
         }
 
         IMUserEntity IMUser = imUserRepository.loginIMUserByPhoneAndPassword(record);
         if (StringUtils.isEmpty(IMUser)) {
-            return getBaseResultMaps(UserEunms.PASSWORD_FAIL.getResCode(),UserEunms.PASSWORD_FAIL.getResMsg(),IMUser);
+            return getBaseResultMaps(UserEunms.SYS_PASSWORD_FAIL.getResCode(),UserEunms.SYS_PASSWORD_FAIL.getResMsg(),IMUser);
         }
-        return getBaseResultMaps(UserEunms.SUCCESS.getResCode(),UserEunms.SUCCESS.getResMsg(),IMUser);
+        return getBaseResultMaps(UserEunms.SYS_SUCCESS.getResCode(),UserEunms.SYS_SUCCESS.getResMsg(),IMUser);
     }
 
     /**
@@ -82,13 +82,13 @@ public class IMUserServiceImpl extends BaseService implements IMUserService {
         //先判断手机号码是否存在
         Integer phoneAndEmailAndCodeIsExits = imUserRepository.checkIMUserByPhoneExits(record);
         if (null == phoneAndEmailAndCodeIsExits || phoneAndEmailAndCodeIsExits == 0) {
-            return getBaseResultMaps(UserEunms.PHONE_ISNULL.getResCode(),UserEunms.PHONE_ISNULL.getResMsg(),phoneAndEmailAndCodeIsExits);
+            return getBaseResultMaps(UserEunms.SYS_PHONE_ISNULL.getResCode(),UserEunms.SYS_PHONE_ISNULL.getResMsg(),phoneAndEmailAndCodeIsExits);
         }else{
             IMUserEntity IMUser = imUserRepository.loginIMUserByPhoneAndSMSCode(record);
             if (null == IMUser) {
-                return getBaseResultMaps(UserEunms.USER_NULL.getResCode(),UserEunms.USER_NULL.getResMsg(),IMUser);
+                return getBaseResultMaps(UserEunms.SYS_USER_NULL.getResCode(),UserEunms.SYS_USER_NULL.getResMsg(),IMUser);
             } else {
-                return getBaseResultMaps(UserEunms.SUCCESS.getResCode(),UserEunms.SUCCESS.getResMsg(),IMUser);
+                return getBaseResultMaps(UserEunms.SYS_SUCCESS.getResCode(),UserEunms.SYS_SUCCESS.getResMsg(),IMUser);
             }
         }
     }
@@ -104,9 +104,9 @@ public class IMUserServiceImpl extends BaseService implements IMUserService {
     public Map<String, Object> checkIMUserByPhoneExits(IMUserEntity param) {
         Integer num = imUserRepository.checkIMUserByPhoneExits(param);
         if (num == 0) {
-            return getBaseResultMaps(UserEunms.SUCCESS.getResCode(),UserEunms.SUCCESS.getResMsg(),num);
+            return getBaseResultMaps(UserEunms.SYS_SUCCESS.getResCode(),UserEunms.SYS_SUCCESS.getResMsg(),num);
         } else {
-            return getBaseResultMaps(UserEunms.PHONE_NOTNULL.getResCode(),UserEunms.PHONE_NOTNULL.getResMsg(),num);
+            return getBaseResultMaps(UserEunms.SYS_PHONE_NOTNULL.getResCode(),UserEunms.SYS_PHONE_NOTNULL.getResMsg(),num);
         }
     }
 
@@ -121,9 +121,9 @@ public class IMUserServiceImpl extends BaseService implements IMUserService {
     public Map<String, Object> checkIMUserByEmailExits(IMUserEntity param) {
         Integer num = imUserRepository.checkIMUserByEmailExits(param);
         if (num == 0) {
-            return getBaseResultMaps(UserEunms.SUCCESS.getResCode(),UserEunms.SUCCESS.getResMsg(),num);
+            return getBaseResultMaps(UserEunms.SYS_SUCCESS.getResCode(),UserEunms.SYS_SUCCESS.getResMsg(),num);
         } else {
-            return getBaseResultMaps(UserEunms.EMAIL_NOTNULL.getResCode(),UserEunms.EMAIL_NOTNULL.getResMsg(),num);
+            return getBaseResultMaps(UserEunms.SYS_EMAIL_NOTNULL.getResCode(),UserEunms.SYS_EMAIL_NOTNULL.getResMsg(),num);
         }
     }
 
@@ -158,15 +158,15 @@ public class IMUserServiceImpl extends BaseService implements IMUserService {
                 //不存在
                 boolean saveUser = imUserRepository.saveIMUserInfo(record);
                 if(saveUser){
-                    return getBaseResultMaps(UserEunms.SUCCESS.getResCode(),UserEunms.SUCCESS.getResMsg(),saveUser);
+                    return getBaseResultMaps(UserEunms.SYS_SUCCESS.getResCode(),UserEunms.SYS_SUCCESS.getResMsg(),saveUser);
                 }else{
-                    return getBaseResultMaps(UserEunms.REGISTER_FAIL.getResCode(),UserEunms.REGISTER_FAIL.getResMsg(),"");
+                    return getBaseResultMaps(UserEunms.SYS_REGISTER_FAIL.getResCode(),UserEunms.SYS_REGISTER_FAIL.getResMsg(),"");
                 }
             }else{
-                return getBaseResultMaps(UserEunms.PHONE_NOTNULL.getResCode(),UserEunms.PHONE_NOTNULL.getResMsg(),"");
+                return getBaseResultMaps(UserEunms.SYS_PHONE_NOTNULL.getResCode(),UserEunms.SYS_PHONE_NOTNULL.getResMsg(),"");
             }
         }catch(Exception e){
-            return getBaseResultMaps(UserEunms.ERROR.getResCode(),UserEunms.ERROR.getResMsg(),e.getMessage());
+            return getBaseResultMaps(UserEunms.SYS_ERROR.getResCode(),UserEunms.SYS_ERROR.getResMsg(),e.getMessage());
         }
     }
 
@@ -182,9 +182,9 @@ public class IMUserServiceImpl extends BaseService implements IMUserService {
     public Map<String, Object> updateIMUserPasswordById(IMUserEntity param) {
         Integer num = imUserRepository.updateIMUserPasswordById(param);
         if (num > 0) {
-            return getBaseResultMaps(UserEunms.SUCCESS.getResCode(),UserEunms.SUCCESS.getResMsg(),num);
+            return getBaseResultMaps(UserEunms.SYS_SUCCESS.getResCode(),UserEunms.SYS_SUCCESS.getResMsg(),num);
         } else {
-            return getBaseResultMaps(UserEunms.PASSWORD_UPDATE_FAIL.getResCode(),UserEunms.PASSWORD_UPDATE_FAIL.getResMsg(),num);
+            return getBaseResultMaps(UserEunms.SYS_PASSWORD_UPDATE_FAIL.getResCode(),UserEunms.SYS_PASSWORD_UPDATE_FAIL.getResMsg(),num);
         }
     }
 
@@ -194,9 +194,9 @@ public class IMUserServiceImpl extends BaseService implements IMUserService {
     public Map<String, Object> updateUserStatus(IMUserEntity record) {
         Integer num = imUserRepository.updateUserStatus(record);
         if (num > 0) {
-            return getBaseResultMaps(UserEunms.ADMIN_SUCCESS.getResCode(),UserEunms.ADMIN_SUCCESS.getResMsg(),num);
+            return getBaseResultMaps(UserEunms.SYS_SUCCESS.getResCode(),UserEunms.SYS_SUCCESS.getResMsg(),num);
         } else {
-            return getBaseResultMaps(UserEunms.FAIL.getResCode(),UserEunms.FAIL.getResMsg(),num);
+            return getBaseResultMaps(UserEunms.SYS_FAIL.getResCode(),UserEunms.SYS_FAIL.getResMsg(),num);
         }
     }
 
@@ -210,9 +210,9 @@ public class IMUserServiceImpl extends BaseService implements IMUserService {
     public Map<String, Object> loginIMUserById(IMUserEntity record) {
         IMUserEntity IMUserEntity = imUserRepository.loginIMUserById(record);
         if (!StringUtils.isEmpty(IMUserEntity)) {
-            return getBaseResultMaps(UserEunms.ADMIN_SUCCESS.getResCode(),UserEunms.ADMIN_SUCCESS.getResMsg(),IMUserEntity);
+            return getBaseResultMaps(UserEunms.SYS_SUCCESS.getResCode(),UserEunms.SYS_SUCCESS.getResMsg(),IMUserEntity);
         } else {
-            return getBaseResultMaps(UserEunms.FAIL.getResCode(),UserEunms.FAIL.getResMsg(),IMUserEntity);
+            return getBaseResultMaps(UserEunms.SYS_FAIL.getResCode(),UserEunms.SYS_FAIL.getResMsg(),IMUserEntity);
         }
     }
 }
