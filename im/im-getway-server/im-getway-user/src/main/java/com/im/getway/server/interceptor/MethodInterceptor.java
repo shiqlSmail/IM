@@ -39,7 +39,7 @@ public class MethodInterceptor implements HandlerInterceptor {
 
             JSONObject json = new JSONObject();
             try {
-                json.put("msg", "请求方法不是POST请求，已拒绝继续访问，请修改请求方法后再试！");
+                json.put("msg", "非法请求");
                 json.put("status", "IM-METHOD-ERROR");
                 json.put("data", "{}");
                 writer = response.getWriter();

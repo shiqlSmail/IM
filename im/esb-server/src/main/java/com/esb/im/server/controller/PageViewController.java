@@ -81,4 +81,9 @@ public class PageViewController {
         session.removeAttribute("login_username");
         return "login";
     }
+
+    @RequestMapping(value = "/welcome.htm")
+    public String welcome(HttpSession session){
+        return "welcome";
+    }
 }

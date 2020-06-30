@@ -89,6 +89,12 @@ public class ESBController extends InterfaceBean {
             Map<String,Object> map = (Map) JSON.parse(json);
             String transCode = map.get("trans_code").toString();
             IMApiDO ilonwApiDO = ilonwApiService.selectByTransCode(transCode);
+            if(null == ilonwApiDO){
+                Map<String,String> resultMap = getAppInfo(json);
+                resultMap.put("data", "服务识别失败");
+                resultMap.put("code", "SERVER-ERROR");
+                return JSON.toJSONString(resultMap);
+            }
             String url =ilonwApiDO.getApiUrl();
             Integer status =ilonwApiDO.getApiStatus();
             //获取完trans_code,从map集合中取出trans_code

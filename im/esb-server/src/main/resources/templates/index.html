@@ -45,14 +45,7 @@
 <div class="left-nav">
 	<div id="side-nav">
 		<ul id="nav">
-			<li>
-				<a href="javascript:;" onclick="xadmin.add_tab('我的桌面','welcome.html')">
-					<i class="layui-icon left-nav-li" lay-tips="首页">&#xe68e;</i>
-					<cite>首页</cite>
-					<i class="iconfont nav_right">&#xe697;</i></a>
-			</li>
-
-			<li>
+			<li th:if="${username} eq 'admin'">
 				<a href="javascript:;">
 					<i class="iconfont left-nav-li" lay-tips="用户管理">&#xe6b8;</i>
 					<cite>会员管理</cite>
@@ -110,7 +103,7 @@
 		</div>
 		<div class="layui-tab-content">
 			<div class="layui-tab-item layui-show">
-				<iframe src='./welcome.html' frameborder="0" scrolling="yes" class="x-iframe"></iframe>
+				<iframe src='/page/welcome.htm' frameborder="0" scrolling="yes" class="x-iframe"></iframe>
 			</div>
 		</div>
 		<div id="tab_show"></div>
