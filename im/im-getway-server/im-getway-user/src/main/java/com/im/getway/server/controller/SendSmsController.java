@@ -35,15 +35,12 @@ public class SendSmsController extends BaseController {
         long now = System.currentTimeMillis();
         Map<String, Object> map = new HashMap<>();
         try {
-            /*int code = (int) ((Math.random() * 9 + 1) * 100000);
+            int code = Integer.valueOf(param.getSmscode());
+            /*
             SendSmsUtils sms = new SendSmsUtils();
             boolean isFlag = sms.send(param.getPhone(), code);*/
             boolean isFlag = true;
-            int code = 111111;
             if (isFlag) {
-                //将短信验证码放入缓存中，存放时间未60秒
-                Cache.put(param.getPhone(),code,60000);
-
                 map.put("resCode", "BIZ_ADMIN_SUCCESS");
                 map.put("resMsg", "success");
                 map.put("resData", code);

@@ -13,8 +13,5 @@ public class SysIlonwSaveUserParam {
     @ApiModelProperty(value = "用户登陆密码")
     private String password;
 
-    @ApiModelProperty(value = "验证码")
-    private String smscode;
-
     private String ip;
 }

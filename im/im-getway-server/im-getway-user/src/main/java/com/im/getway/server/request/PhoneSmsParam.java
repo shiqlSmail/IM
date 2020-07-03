@@ -14,4 +14,6 @@ public class PhoneSmsParam {
     @Pattern(regexp = "^1(3|4|5|7|8)\\d{9}$",message = "手机号码格式错误")
     @NotBlank(message = "手机号码不能为空")
     private String phone;
+
+    private String smscode;
 }

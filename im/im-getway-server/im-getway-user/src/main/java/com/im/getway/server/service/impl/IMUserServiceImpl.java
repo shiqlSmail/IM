@@ -32,25 +32,9 @@ public class IMUserServiceImpl extends BaseService implements IMUserService {
     public Map<String,Object> loginIlonwUserByPhoneAndEmailAndCode(IlonwLoginParam param){
         Map<String,Object> map = new HashMap<String,Object>();
         IMUserEntity record = new IMUserEntity();
-        Object phone = Cache.get(param.getPhone());
         if(UserLoginEunms.CODE.getResCode().equals(param.getLoginType())){
-            //判断验证码是否为空
-            if(StringUtils.isEmpty(param.getSmscode())){
-                return getBaseResultMaps(UserEunms.BIZ_SMSCODE_NULL.getResCode(),UserEunms.BIZ_SMSCODE_NULL.getResMsg(),"");
-            }else if(null == phone){
-                return getBaseResultMaps(UserEunms.BIZ_SMSCODE_EXITS.getResCode(),UserEunms.BIZ_SMSCODE_EXITS.getResMsg(),"");
-            }else{
-                String str = String.valueOf(Cache.get(param.getPhone()));
-                if("null".equals(str)){  //因为数据是从cacha缓存读取出来的，所以null值判断方式未 “null”
-                    return getBaseResultMaps(UserEunms.BIZ_SMSCODE_EXITS.getResCode(),UserEunms.BIZ_SMSCODE_EXITS.getResMsg(),"");
-                }else{
-                    if(!StringUtils.equals(param.getSmscode(),str)) {
-                        return getBaseResultMaps(UserEunms.BIZ_SMSCODE_NOTNULL.getResCode(),UserEunms.BIZ_SMSCODE_NOTNULL.getResMsg(),"");
-                    }
-                    record.setImUserPhone(param.getPhone());
-                    map = imUserFacade.loginIMUserByPhone(record);
-                }
-            }
+            record.setImUserPhone(param.getPhone());
+            map = imUserFacade.loginIMUserByPhone(record);
         }else{
             record.setImUserPhone(param.getPhone());
             record.setImUserPassword(MD5Util.MD5Encode(param.getPassword(),"UTF-8"));
@@ -67,7 +51,6 @@ public class IMUserServiceImpl extends BaseService implements IMUserService {
     @Override
     public Map<String,Object> queryAllUser(PageData pageData){
         PageBean<IMUserEntity> listUser = new PageBean<>();
-        Map<String,Object> map = new HashMap<String,Object>();
         Object obj = Cache.get("query_user");
         if(null == obj){
             listUser = imUserFacade.findAllIMUserInfo(pageData);
@@ -139,23 +122,8 @@ public class IMUserServiceImpl extends BaseService implements IMUserService {
         if(resData == 1){
             return getBaseResultMaps(String.valueOf(phoneExits.get("resCode")),String.valueOf(phoneExits.get("resMsg")),"");
         }else{
-            if(StringUtils.isEmpty(param.getSmscode())){
-                return getBaseResultMaps(UserEunms.BIZ_SMSCODE_NULL.getResCode(),UserEunms.BIZ_SMSCODE_NULL.getResMsg(),"");
-            }else{
-                //如果手机号码不存在，可以注册，开始判断验证码
-                String str = String.valueOf(Cache.get(param.getPhone()));
-                if("null".equals(str)){  //因为数据是从cacha缓存读取出来的，所以null值判断方式未 “null”
-                    return getBaseResultMaps(UserEunms.BIZ_SMSCODE_EXITS.getResCode(),UserEunms.BIZ_SMSCODE_EXITS.getResMsg(),"");
-                }else{
-                    if(param.getSmscode() == str || param.getSmscode().equals(str)) {
-                        //如果验证码输入正确，进行注册操作
-                        IMUserEntity saveUserBTO = getUserBTO(param);
-                        map = imUserFacade.saveIMUserInfo(saveUserBTO);
-                    }else{
-                        return getBaseResultMaps(UserEunms.BIZ_SMSCODE_ERROR.getResCode(),UserEunms.BIZ_SMSCODE_ERROR.getResMsg(),"");
-                    }
-                }
-            }
+            IMUserEntity saveUserBTO = getUserBTO(param);
+            map = imUserFacade.saveIMUserInfo(saveUserBTO);
         }
         return map;
     }

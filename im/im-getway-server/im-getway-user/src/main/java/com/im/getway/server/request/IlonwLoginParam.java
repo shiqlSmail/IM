@@ -22,7 +22,4 @@ public class IlonwLoginParam  implements Serializable {
 
     @ApiModelProperty(value = "1：手机号验证码  2：账号密码")
     private String loginType;
-
-    @ApiModelProperty(value = "验证码")
-    private String smscode;
 }
