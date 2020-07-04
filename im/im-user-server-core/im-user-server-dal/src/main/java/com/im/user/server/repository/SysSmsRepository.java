@@ -35,4 +35,6 @@ public interface SysSmsRepository {
      * @return
      */
     boolean updateSmsByPhone(SysSmsEntity record);
+
+    Integer countSmsByPhone(SysSmsEntity record);
 }

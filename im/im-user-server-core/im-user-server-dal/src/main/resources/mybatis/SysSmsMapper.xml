@@ -53,7 +53,19 @@
 	</insert>
 	
 	<select id="findSmsByPhone" resultType="com.im.user.server.domain.SysSmsEntity" parameterType="com.im.user.server.domain.SysSmsEntity">
-		select <include refid="findColumnSms"/> from sys_sms where sms_phone = #{smsPhone,jdbcType=VARCHAR}
+		select <include refid="findColumnSms"/> from sys_sms where
+		 1=1
+		<if test="smsPhone != null">
+			and sms_phone = #{smsPhone,jdbcType=VARCHAR}
+		</if>
+	</select>
+
+	<select id="countSmsByPhone" resultType="java.lang.Integer" parameterType="com.im.user.server.domain.SysSmsEntity">
+		select count(-1) from sys_sms where
+		1=1
+		<if test="smsPhone != null">
+			and sms_phone = #{smsPhone,jdbcType=VARCHAR}
+		</if>
 	</select>
 
 	<update id="updateSms">

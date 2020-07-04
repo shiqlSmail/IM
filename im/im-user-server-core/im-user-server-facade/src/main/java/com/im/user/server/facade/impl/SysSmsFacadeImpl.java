@@ -4,12 +4,13 @@ import com.im.user.server.domain.SysEmailCodeEntity;
 import com.im.user.server.domain.SysEmailUrlEntity;
 import com.im.user.server.domain.SysSmsEntity;
 import com.im.user.server.facade.SysSmsFacade;
+import com.im.user.server.page.PageBean;
 import com.im.user.server.service.biz.SysSmsService;
+import com.im.user.server.service.request.EmailCodeRequest;
+import com.im.user.server.service.request.SmsCodeRequest;
 import com.server.tools.cache.Cache;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-import java.util.List;
 
 @Service("sysSmsFacade")
 public class SysSmsFacadeImpl implements SysSmsFacade {
@@ -24,7 +25,7 @@ public class SysSmsFacadeImpl implements SysSmsFacade {
     }
 
     @Override
-    public List<SysSmsEntity> findSmsByPhone(SysSmsEntity record) {
+    public PageBean<SysSmsEntity> findSmsByPhone(SmsCodeRequest record) {
         return sysSmsService.findSmsByPhone(record);
     }
 
@@ -35,7 +36,7 @@ public class SysSmsFacadeImpl implements SysSmsFacade {
     }
 
     @Override
-    public List<SysEmailCodeEntity> findEmailCodeByEmailName(SysEmailCodeEntity record) {
+    public PageBean<SysEmailCodeEntity> findEmailCodeByEmailName(EmailCodeRequest record) {
         return sysSmsService.findEmailCodeByEmailName(record);
     }
 
@@ -45,7 +46,7 @@ public class SysSmsFacadeImpl implements SysSmsFacade {
     }
 
     @Override
-    public List<SysEmailUrlEntity> findEmailByEmailUrl(SysEmailUrlEntity record) {
+    public PageBean<SysEmailUrlEntity> findEmailByEmailUrl(EmailCodeRequest record) {
         return sysSmsService.findEmailByEmailUrl(record);
     }
 

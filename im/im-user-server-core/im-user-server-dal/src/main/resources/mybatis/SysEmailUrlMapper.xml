@@ -53,6 +53,18 @@
 	</insert>
 
 	<select id="findEmailByEmailUrl" resultType="com.im.user.server.domain.SysEmailUrlEntity" parameterType="com.im.user.server.domain.SysEmailUrlEntity">
-		select <include refid="findColumnEmailUrl"/> from sys_emailurl where email_name = #{emailName,jdbcType=VARCHAR}
+		select <include refid="findColumnEmailUrl"/> from sys_emailurl where
+		1=1
+		<if test="emailName != null">
+			and email_name = #{emailName,jdbcType=VARCHAR}
+		</if>
+	</select>
+
+	<select id="countEmailByEmailUrl" resultType="java.lang.Integer" parameterType="com.im.user.server.domain.SysEmailUrlEntity">
+		select count(-1) from sys_emailurl where
+		1=1
+		<if test="emailName != null">
+			and email_name = #{emailName,jdbcType=VARCHAR}
+		</if>
 	</select>
 </mapper>

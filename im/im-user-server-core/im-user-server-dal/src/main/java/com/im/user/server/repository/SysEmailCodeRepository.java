@@ -36,4 +36,6 @@ public interface SysEmailCodeRepository {
      * @return
      */
     boolean updateEmailCodeByEmailName(SysEmailCodeEntity record);
+
+    Integer countEmailCodeByEmailName(SysEmailCodeEntity record);
 }

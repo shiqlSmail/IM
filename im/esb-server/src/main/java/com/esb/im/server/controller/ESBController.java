@@ -8,18 +8,14 @@ import com.esb.im.server.xml.AnalysisFactory;
 import com.server.tools.crypto.SM2;
 import com.server.tools.crypto.Util;
 import com.server.tools.result.InterfaceResultData;
-import net.sf.json.JSONObject;
 import org.apache.commons.lang.StringUtils;
 import org.dom4j.DocumentException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.core.io.ClassPathResource;
 import org.springframework.web.bind.annotation.*;
-import springfox.documentation.spring.web.json.Json;
 
-import java.io.InputStream;
 import java.math.BigInteger;
 import java.util.HashMap;
 import java.util.Map;
@@ -115,7 +111,7 @@ public class ESBController extends InterfaceBean {
             SM2 sm02 = new SM2();
             log.info("-----------------开始进行解密操作-----------------");
            // BigInteger privateKey = sm02.importPrivateKey("/usr/src/certificate/privatekey.pem");
-            BigInteger privateKey = sm02.importPrivateKey("H:\\crypto\\esb-privatekey.pem");
+            BigInteger privateKey = sm02.importPrivateKey("/usr/src/crypto/esb-privatekey.pem");
             byte[] data = Util.hexStringToBytes(sign);
             String appInfo = sm02.decrypt(data, privateKey);
             log.info("解密完成的数据为：" + appInfo);

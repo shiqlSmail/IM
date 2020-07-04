@@ -23,4 +23,6 @@ public interface SysEmailUrlRepository {
      * @return
      */
     List<SysEmailUrlEntity> findEmailByEmailUrl(SysEmailUrlEntity record);
+
+    Integer countEmailByEmailUrl(SysEmailUrlEntity record);
 }

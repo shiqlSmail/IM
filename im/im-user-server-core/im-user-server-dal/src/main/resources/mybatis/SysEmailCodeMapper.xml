@@ -53,7 +53,19 @@
 	</insert>
 
 	<select id="findEmailCodeByEmailName" resultType="com.im.user.server.domain.SysEmailCodeEntity" parameterType="com.im.user.server.domain.SysEmailCodeEntity">
-		select  <include refid="findColumnEmailCode"/>  from sys_email where email_name = #{emailName,jdbcType=VARCHAR}
+		select  <include refid="findColumnEmailCode"/>  from sys_email where
+		1=1
+		<if test="emailName != null">
+			and email_name = #{emailName,jdbcType=VARCHAR}
+		</if>
+	</select>
+
+	<select id="countEmailCodeByEmailName" resultType="java.lang.Integer" parameterType="com.im.user.server.domain.SysEmailCodeEntity">
+		select  count(-1)  from sys_email where
+		1=1
+		<if test="emailName != null">
+			and email_name = #{emailName,jdbcType=VARCHAR}
+		</if>
 	</select>
 
 	<update id="updateEmailCode">

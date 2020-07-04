@@ -3,8 +3,9 @@ package com.im.user.server.service.biz;
 import com.im.user.server.domain.SysEmailCodeEntity;
 import com.im.user.server.domain.SysEmailUrlEntity;
 import com.im.user.server.domain.SysSmsEntity;
-
-import java.util.List;
+import com.im.user.server.page.PageBean;
+import com.im.user.server.service.request.EmailCodeRequest;
+import com.im.user.server.service.request.SmsCodeRequest;
 
 public interface SysSmsService {
 
@@ -17,10 +18,10 @@ public interface SysSmsService {
 
     /**
      * 根据手机号码查看验证码信息
-     * @param record
+     * @param smsCodeRequest
      * @return
      */
-    List<SysSmsEntity> findSmsByPhone(SysSmsEntity record);
+    PageBean<SysSmsEntity> findSmsByPhone(SmsCodeRequest smsCodeRequest);
 
     /**
      * 更新验证码信息
@@ -40,7 +41,7 @@ public interface SysSmsService {
      * @param record
      * @return
      */
-    List<SysEmailCodeEntity> findEmailCodeByEmailName(SysEmailCodeEntity record);
+    PageBean<SysEmailCodeEntity> findEmailCodeByEmailName(EmailCodeRequest record);
 
     /**
      * 更新邮箱验证码信息
@@ -60,5 +61,5 @@ public interface SysSmsService {
      * @param record
      * @return
      */
-    List<SysEmailUrlEntity> findEmailByEmailUrl(SysEmailUrlEntity record);
+    PageBean<SysEmailUrlEntity> findEmailByEmailUrl(EmailCodeRequest record);
 }
