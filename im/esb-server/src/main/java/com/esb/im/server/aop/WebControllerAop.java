@@ -17,13 +17,6 @@ import javax.servlet.http.HttpSession;
 import java.util.Enumeration;
 import java.util.Map;
 
-/**
- * Created by shiql
- */
-
-/**
- * 1.先创建一个Aspect切面类
- */
 @Component
 @Aspect
 public class WebControllerAop {
@@ -33,7 +26,7 @@ public class WebControllerAop {
      * 2. 指定切点
      * 匹配com.zdj.springboot_aop.Controller包及其子包下面的所有类的所有方法
      */
-    @Pointcut("execution(* com.esb.im.server.controller..*.*(..))")
+    @Pointcut("execution(* com.esb.im.server.controller.esb..*.*(..))")
     public void executeService() {
 
     }
@@ -73,9 +66,8 @@ public class WebControllerAop {
             parameterMaps.put(parameter, request.getParameter(parameter));
         }
 
-        String str = JSON.toJSONString(parameterMaps);
         if (obj.length > 0) {
-            log.info("请求参数信息为 ： " + str);
+            log.info("请求参数信息为 ： " + JSON.toJSONString(obj));
         }
 
     }
@@ -91,14 +83,14 @@ public class WebControllerAop {
      * @param joinPoint
      * @param keys
      */
-    @AfterReturning(value = "execution(* com.esb.im.server.controller..*.*(..))", returning = "keys")
+    @AfterReturning(value = "execution(* com.esb.im.server.controller.esb..*.*(..))", returning = "keys")
     public void doAfterReturningAdvice1(JoinPoint joinPoint, Object keys) {
-        log.info("第一个后置返回通知的返回值是 ：" + keys);
+        log.info("第一个后置返回通知的返回值是 ：" + JSON.toJSON(keys));
     }
 
-    @AfterReturning(value = "execution(* com.esb.im.server.controller..*.*(..))", returning = "keys", argNames = "keys")
+    @AfterReturning(value = "execution(* com.esb.im.server.controller.esb..*.*(..))", returning = "keys", argNames = "keys")
     public void doAfterReturningAdvice2(String keys) { // 通知方法形影参数的类型是String
-        log.info("第二个后置返回通知的返回值是 ：" + keys);
+        log.info("第二个后置返回通知的返回值是 ：" + JSON.toJSON(keys));
     }
 
     /**
@@ -131,7 +123,7 @@ public class WebControllerAop {
      *   环绕通知非常强大，可以决定目标方法是否执行，什么时候执行，执行时是否需要替换方法参数，执行完毕是否需要替换返回值。
      *   环绕通知第一个参数必须是org.aspectj.lang.ProceedingJoinPoint类型
      */
-    @Around("execution(* com.esb.im.server.controller..*.*(..))")
+    @Around("execution(* com.esb.im.server.controller.esb..*.*(..))")
     public Object doAroundService(ProceedingJoinPoint proceedingJoinPoint) {
         log.info("环绕通知的目标方法名为 ： " + proceedingJoinPoint.getSignature().getName());
         try {

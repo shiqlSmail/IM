@@ -1,9 +1,11 @@
 package com.esb.im.server.system;
 
 import com.alibaba.fastjson.JSON;
+import com.esb.im.server.service.IMSysConfigService;
 import com.server.tools.date.DateUtil;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.net.ConnectException;
@@ -17,6 +19,9 @@ import java.util.Map;
 public class InterfaceBean extends HttpRequestUtils{
 
     protected static final Logger log = LoggerFactory.getLogger(InterfaceBean.class);
+
+    @Autowired(required = false)
+    private IMSysConfigService imSysConfigService;
 
     /**
      * 发送post请求
@@ -84,5 +89,9 @@ public class InterfaceBean extends HttpRequestUtils{
         map.put("status", 100101);
         map.put("data", timeOutMap);
         return JSON.toJSONString(map);
+    }
+
+    public String configCodeByValue(String code){
+        return imSysConfigService.findConfigByCode(code);
     }
 }

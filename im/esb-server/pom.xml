@@ -284,6 +284,12 @@
             </exclusions>
             <version>0.6</version>
         </dependency>
+
+        <dependency>
+            <groupId>com.chars.im.server</groupId>
+            <artifactId>im-chars-client</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
     </dependencies>
 
     <build>
