@@ -1,8 +1,10 @@
+/*
 package com.esb.im.server.controller.esb;
 
 import com.alibaba.fastjson.JSON;
 import com.chars.im.server.*;
 import com.chars.im.server.config.ImClientConfig;
+import com.chars.im.server.http.HttpResponse;
 import com.chars.im.server.packets.ChatBody;
 import com.chars.im.server.packets.ChatType;
 import com.chars.im.server.packets.Command;
@@ -29,3 +31,4 @@ public class CharsClientController extends HelloClientStarter {
         return sendChars(imCharsParam);
     }
 }
+*/

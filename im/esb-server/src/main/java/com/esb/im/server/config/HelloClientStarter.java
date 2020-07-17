@@ -1,3 +1,4 @@
+/*
 package com.esb.im.server.config;
 
 import com.alibaba.fastjson.JSON;
@@ -14,19 +15,23 @@ import org.tio.core.Node;
 import java.util.HashMap;
 import java.util.Map;
 
+*/
 /**
  * 版本: [1.0]
  * 功能说明:
  * 作者: WChao 创建时间: 2017年8月30日 下午1:05:17
- */
+ *//*
+
 
 public class HelloClientStarter{
 
     public static ImClientChannelContext imClientChannelContext = null;
 
-    /**
-     * 启动程序入口
-     */
+    */
+/**
+     * 聊天程序入口
+     *//*
+
     public static String sendChars(IMCharsParam imCharsParam) throws Exception {
         //服务器节点
         Node serverNode = new Node("127.0.0.1", ImConst.SERVER_PORT);
@@ -46,7 +51,8 @@ public class HelloClientStarter{
         //连接服务端
         imClientChannelContext = jimClient.connect(serverNode);
 
-        /*Integer msgType = 0;
+        */
+/*Integer msgType = 0;
         try{
             //判断消息类型是否正确
             msgType = Integer.valueOf(imCharsParam.getMsgType());
@@ -55,7 +61,8 @@ public class HelloClientStarter{
             resultMap.put("data", "消息类型传输有误");
             resultMap.put("code", "MSG-TYPE-ERRPR");
             return JSON.toJSONString(resultMap);
-        }*/
+        }*//*
+
         //连上后，发条消息测试一下
         return send(imCharsParam.getFromUser(),
                 imCharsParam.getToUser(),
@@ -65,7 +72,8 @@ public class HelloClientStarter{
                 imCharsParam.getMsgContent());
     }
 
-    /**
+    */
+/**
      * 发送消息的方法
      *
      * @param fromUser   发送消息者ID
@@ -75,7 +83,8 @@ public class HelloClientStarter{
      * @param groupID    群聊，暂时不用
      * @param msgContent 消息体
      * @throws Exception
-     */
+     *//*
+
     private static String send(String fromUser, String toUser, Integer msgType, Integer charType, String groupID, String msgContent) throws Exception {
         Map<String, Object> map = new HashMap<String, Object>();
         try{
@@ -100,4 +109,4 @@ public class HelloClientStarter{
             return JSON.toJSONString(map);
         }
     }
-}
+}*/

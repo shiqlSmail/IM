@@ -8,6 +8,7 @@ import com.esb.im.server.xml.AnalysisFactory;
 import com.server.tools.crypto.SM2;
 import com.server.tools.crypto.Util;
 import com.server.tools.result.InterfaceResultData;
+import net.sf.json.JSONObject;
 import org.apache.commons.lang.StringUtils;
 import org.dom4j.DocumentException;
 import org.slf4j.Logger;
@@ -17,6 +18,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.math.BigInteger;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.Map;
 
 @RestController
@@ -111,11 +113,23 @@ public class ESBController extends InterfaceBean {
         }
     }
 
-    private Map<String, String> getAppInfo(String sign) {
+    private Map<String, String> getAppInfo(String signParan) {
         Map<String, String> map = new HashMap<String, String>();
         try {
             //调用解密方法
             SM2 sm02 = new SM2();
+
+            JSONObject jsonObject = JSONObject.fromObject(signParan.trim());
+            HashMap<String, String> maps = JsonObjectToHashMap(jsonObject);
+
+            String sign = "";
+            if(StringUtils.equals(maps.get("code"),"SIGN_SUCCESS")){
+                sign = maps.get("data");
+            }else{
+                map.put("data", "签名异常");
+                map.put("code", "SIGN-999999");
+                return map;
+            }
             log.info("-----------------开始进行解密操作-----------------");
            // BigInteger privateKey = sm02.importPrivateKey("/usr/src/certificate/privatekey.pem");
             BigInteger privateKey = sm02.importPrivateKey("/usr/src/crypto/esb-privatekey.pem");
@@ -132,5 +146,18 @@ public class ESBController extends InterfaceBean {
             e.printStackTrace();
         }
         return map;
+    }
+
+    //1.將JSONObject對象轉換為HashMap<String,String>
+    public static HashMap<String, String> JsonObjectToHashMap(JSONObject jsonObj){
+        HashMap<String, String> data = new HashMap<String, String>();
+        Iterator it = jsonObj.keys();
+        while(it.hasNext()){
+            String key = String.valueOf(it.next().toString());
+            String value = jsonObj.get(key).toString();
+            data.put(key, value);
+        }
+        System.out.println(data);
+        return data;
     }
 }

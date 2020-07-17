@@ -26,14 +26,14 @@
         </dependency>
     </dependencies>
     <build>
-        <finalName>ilonw-server-user</finalName>
+        <finalName>ilonw-server-file</finalName>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <!--这里写上main方法所在类的路径-->
                 <configuration>
-                    <mainClass>com.im.getway.server.IMUserApiApplication</mainClass>
+                    <mainClass>com.im.getway.server.IMFileApplication</mainClass>
                 </configuration>
                 <executions>
                     <execution>
